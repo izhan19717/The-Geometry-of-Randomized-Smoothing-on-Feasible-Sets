@@ -16,7 +16,7 @@ Ordinary smoothing controls the Gaussian probability of a label event. After fil
 | Outward binomial and radius calculations | [`validated_numerics.py`](src/feasible_robustness/validated_numerics.py) |
 | Finite-horizon trajectory comparison | [`trajectory_certificate.py`](src/feasible_robustness/trajectory_certificate.py) |
 | Exact nonconvex witness | [`certify_local_lshape_witness.py`](experiments/certify_local_lshape_witness.py) |
-| Reanalysis of the retained CIFAR-10.2 counts | [`iclr2027_conditional_renyi_reanalysis.py`](experiments/iclr2027_conditional_renyi_reanalysis.py) |
+| Reanalysis of the retained CIFAR-10.2 counts | [`reanalyze_cifar102.py`](scripts/reanalyze_cifar102.py) |
 | Frozen study protocols and recorded outputs | [`research/`](_ICLR_2027__Feasibility_Breaks_Smoothing/research/) and [`outputs/`](outputs/) |
 | File integrity checks | [`MANIFEST.sha256`](MANIFEST.sha256) |
 
@@ -58,9 +58,9 @@ To regenerate the exact witness and the two CIFAR-10.2 analyses from retained ro
 mkdir -p reproduced
 PYTHONPATH=.:src python experiments/certify_local_lshape_witness.py \
   --output reproduced/local_lshape.json
-PYTHONPATH=.:src python experiments/iclr2027_conditional_renyi_reanalysis.py \
+PYTHONPATH=.:src python scripts/reanalyze_cifar102.py \
   --output-directory reproduced/renyi
-PYTHONPATH=.:src python experiments/iclr2027_validate_cifar102_certificates.py \
+PYTHONPATH=.:src python scripts/validate_cifar102_certificates.py \
   --output-directory reproduced/validated
 ```
 

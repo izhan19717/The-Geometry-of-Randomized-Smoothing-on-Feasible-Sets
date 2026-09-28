@@ -1,8 +1,9 @@
-# Anonymous reproducibility supplement
+# Reproduction guide
 
-This archive contains the source, study protocols, tests, and retained tables
-used by **The Geometry of Randomized Smoothing on Feasible Sets**. It contains
-no author identities or private repository history.
+This repository contains the source, study protocols, tests, and retained tables
+used by **The Geometry of Randomized Smoothing on Feasible Sets**. Historical
+experiment paths are unchanged so that recorded protocols and checksums remain
+meaningful.
 
 ## Environment
 
@@ -88,7 +89,7 @@ PYTHONPATH=src python experiments/certify_two_band_covariance_radius.py \
   --output outputs/two_band_covariance_radius_certificate_recomputed.json
 ```
 
-Regenerate the submission figures from the retained tables with the following
+Regenerate the paper figures from the retained tables with the following
 command.
 
 ```sh
@@ -230,7 +231,7 @@ SHA-256
 `e4fd6462bd5141ed293acd52ea570952f65d1bfd4ec9b068f87742f75a7a632e`.
 Neither the dataset nor the AuditVotes checkpoint is redistributed. After
 obtaining both pinned repositories and the released checkpoint, run a fresh
-anonymous reproduction with the following command.
+reproduction with the following command.
 
 ```sh
 PYTHONPATH=.:src python experiments/iclr2027_global_band_cifar102_confirmation.py \
@@ -243,7 +244,7 @@ PYTHONPATH=.:src python experiments/iclr2027_global_band_cifar102_confirmation.p
   --output outputs/recomputed_cifar102_confirmation
 ```
 
-The anonymous protocol uses project-relative paths and updates the checksum of
+The portable protocol uses project-relative paths and updates the checksum of
 the path-normalized development prerequisite. Its numeric settings are
 unchanged. CUDA execution is not expected to be byte identical across hardware.
 
