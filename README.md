@@ -17,7 +17,8 @@ Ordinary smoothing controls the Gaussian probability of a label event. After fil
 | Finite-horizon trajectory comparison | [`trajectory_certificate.py`](src/feasible_robustness/trajectory_certificate.py) |
 | Exact nonconvex witness | [`certify_local_lshape_witness.py`](experiments/certify_local_lshape_witness.py) |
 | Reanalysis of the retained CIFAR-10.2 counts | [`reanalyze_cifar102.py`](scripts/reanalyze_cifar102.py) |
-| Frozen study protocols and recorded outputs | [`research/`](_ICLR_2027__Feasibility_Breaks_Smoothing/research/) and [`outputs/`](outputs/) |
+| Recorded study protocols and results | [`research/`](research/) and [`outputs/`](outputs/) |
+| Retained controller checkpoints | [`controllers/`](controllers/) |
 | File integrity checks | [`MANIFEST.sha256`](MANIFEST.sha256) |
 
 ## What the figures show
@@ -46,11 +47,13 @@ Use Python 3.11 or newer from the repository root.
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -e '.[dev,validated]'
+python scripts/prepare_recorded_paths.py
 PYTHONPATH=.:src python -m pytest -q
 shasum -a 256 -c MANIFEST.sha256
 ```
 
 The verified supplement returned **248 passed, 1 skipped**. The documented skip concerns an original controller configuration containing a machine path. Most mathematical and count-level checks run without a dataset or neural checkpoint.
+The setup command creates local compatibility links for paths stored in the original protocols. The links are not part of the repository or file manifest.
 
 To regenerate the exact witness and the two CIFAR-10.2 analyses from retained rows, write new results to a separate directory.
 

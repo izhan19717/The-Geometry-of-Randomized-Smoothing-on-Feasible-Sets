@@ -48,6 +48,15 @@ python -m pip install -r requirements-controller.txt
 Controller commands use `PYTHONPATH=.:src` and do not require installing the
 core package into this Python 3.10 environment.
 
+Before running the recorded studies, create the local compatibility paths used
+by their original protocols. The repository stores the protocol files in
+`research/` and controller checkpoints in `controllers/`. This command creates
+links at the historical paths without altering either set of files.
+
+```sh
+python3 scripts/prepare_recorded_paths.py
+```
+
 PyTorch and Joblib checkpoints can execute serialized code. The experiment
 loaders verify the declared file checksums before deserialization. Use only the
 pinned external checkpoint and the controller files distributed here.
