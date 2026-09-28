@@ -1,0 +1,58 @@
+{
+  "experiment": "iclr2027_multistep_discrete_time_reach_avoid_controller_benchmark",
+  "focused_test_path": "tests/test_iclr2027_multistep_reach_avoid_benchmark.py",
+  "focused_test_result": "11 passed",
+  "focused_test_sha256": "14a69b63fa6ce94129ed6132bad8cfdb7d591ff7b0c66aecdbc37a7016e3cd2e",
+  "freeze_date": "2026-08-31",
+  "freeze_statement": "After this manifest, no source, protocol, method, metric, selection, split, seed, exclusion, or stopping-rule change is permitted before the fresh protocol-v2 confirmation run. Any further defect must be disclosed under another name; protocol-v1 and protocol-v2 artifacts may not be silently overwritten.",
+  "fresh_confirmation_design": {
+    "audited_state_population": "seven deterministic no-noise reference-trajectory controller states per layout",
+    "bootstrap_resamples": 4000,
+    "bootstrap_seed": 1394297499,
+    "episode_seed": 1284738115,
+    "episodes_per_layout": 32,
+    "independent_unit": "layout",
+    "layout_count": 64,
+    "layout_seed": 184675800,
+    "seed_derivation": "SHA-256 labels and the exact reduction rule are recorded in protocol v2",
+    "uncertainty": "percentile cluster bootstrap over layout means; Wilson intervals over independent layout-level binary attack indicators"
+  },
+  "manifest_version": "2.1",
+  "only_additional_change": "Permit the already-declared protocol_version 2 in the loader and add a focused loader test; no experiment calculation changed.",
+  "parent_freeze_manifest": "REACH_AVOID_CONFIRMATION_FREEZE_V2_20260831.json",
+  "post_freeze_defect_disclosure": {
+    "integrity_response": "Protocol-v1 artifacts are retained. Because those 64 layouts had already been opened, protocol v2 uses a new hash-derived confirmation population rather than relabeling the corrected old calculation as untouched evidence.",
+    "permitted_correction": "Replace only that projection diagnostic with the exact coordinatewise-clipping event probability and emit anonymous relative source paths.",
+    "protocol_v1_defect": "The selected projection sampler clips an unconditioned Gaussian draw after fixed categorical mode selection, but its protocol-v1 binary diagnostic used the probability of a Gaussian conditioned on the clipping rectangle.",
+    "protocol_v1_precheck": {
+      "closest_corrected_radius_minus_boundary_gap": -6.47187347138649e-05,
+      "corrected_projection_attack_count": 0,
+      "maximum_anchor_probability_discrepancy": 3.129235782717288e-07,
+      "states": 448
+    },
+    "unchanged": [
+      "controller",
+      "samplers",
+      "methods",
+      "validation selection",
+      "metrics",
+      "layout generator",
+      "rollout count",
+      "threat model",
+      "theorems"
+    ]
+  },
+  "preexecution_failure": "The first protocol-v2 command terminated in load_protocol before layout generation because the loader accepted only version 1. No v2 evidence or output artifact was opened.",
+  "primary_method_selection": {
+    "all_predeclared_methods_remain_reported": true,
+    "rule": "highest mean validation task return among theorem-backed methods with zero forbidden waypoints and no more actual Gaussian proposals than moving conditioning",
+    "selected_method": "anchor_frozen_corridor_projection",
+    "selection_reopened": false,
+    "selection_source": "the original frozen validation split"
+  },
+  "protocol_path": "_ICLR_2027__Feasibility_Breaks_Smoothing/research/REACH_AVOID_CONTROLLER_PROTOCOL_V2_20260830.json",
+  "protocol_sha256": "2516d1ede131b8c4628705975e795740f8eb28b5a0d6829f1b48ae3fbb5bd81c",
+  "source_path": "experiments/iclr2027_multistep_reach_avoid_benchmark.py",
+  "source_sha256": "fab214af9445e31fc08d11097e760979439e5514a97d87a89007f9261402739c",
+  "status": "frozen_before_fresh_protocol_v2_confirmation_execution"
+}

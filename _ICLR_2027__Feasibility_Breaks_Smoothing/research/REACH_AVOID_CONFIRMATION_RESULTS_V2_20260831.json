@@ -1,0 +1,88 @@
+{
+  "audited_no_noise_reference_states": 448,
+  "claim_boundary": [
+    "The exact attack concerns a predeclared binary event under a vertical action-center perturbation, not a failed numerical search.",
+    "The moving radius is deliberately imported from the ambient Gaussian and is not claimed to be valid.",
+    "Soundness of fixed rows follows from proved common-channel or fixed-weight comparisons; zero empirical attacks are diagnostics, not proofs.",
+    "Utility improvements are held-out paired estimates on the frozen synthetic population, not universal method dominance.",
+    "The selected projection is slower in this Python implementation; fewer Gaussian proposals is not a wall-clock speedup claim.",
+    "The controller is a standard receding-horizon waypoint controller, not a learned policy.",
+    "The audit evaluates seven deterministic no-noise reference states per layout, not every stochastic rollout state.",
+    "No observation-space, support-changing, continuous-time, swept-segment, trajectory, or real-world prevalence claim is made."
+  ],
+  "correction_boundary": {
+    "defect": "The protocol-v1 projection diagnostic used a Gaussian conditioned on the clipping rectangle although the executed sampler clips an unconditioned draw.",
+    "fresh_population_required_because_old_split_was_opened": true,
+    "maximum_old_split_probability_change": 3.129236e-07,
+    "old_split_attack_count_after_correction": 0,
+    "permitted_change": "Replace only that diagnostic by the exact coordinatewise-clipping pushforward probability and emit anonymous relative source paths.",
+    "protocol_v1_artifacts_retained": true
+  },
+  "deterministic_result_sha256_excluding_runtime": "1918fbb42e35876a8af58e77f3d147307c76e52b73d8ec3e658647cfb1aa26c8",
+  "episodes_per_layout_per_method": 32,
+  "experiment": "iclr2027_multistep_discrete_time_reach_avoid_controller_benchmark",
+  "freeze_manifest": "REACH_AVOID_CONFIRMATION_FREEZE_V2_1_20260831.json",
+  "frozen_sha256": {
+    "freeze_manifest": "d3bd7306f47fbfc1fe1fe590ac15d76417e169be978925126a63374cb1de3b51",
+    "protocol": "2516d1ede131b8c4628705975e795740f8eb28b5a0d6829f1b48ae3fbb5bd81c",
+    "source": "fab214af9445e31fc08d11097e760979439e5514a97d87a89007f9261402739c",
+    "test": "14a69b63fa6ce94129ed6132bad8cfdb7d591ff7b0c66aecdbc37a7016e3cd2e"
+  },
+  "independent_rerun_digest_matches": true,
+  "independent_units": 64,
+  "manifest_version": 2,
+  "output_sha256": {
+    "iclr2027_multistep_reach_avoid_confirmation_v2.json": "fc90c977e7d4701fb0a207764f3659a9d68299b252e8897ee244dc75571514cb",
+    "iclr2027_multistep_reach_avoid_confirmation_v2_audit_summary.csv": "c918b34e1114667683e3796311319f47dfb942a63c684b7ff028cdc20332a6fe",
+    "iclr2027_multistep_reach_avoid_confirmation_v2_certificate_audit.csv": "09b0f78dd867edd4dda15796723a187402093c5bddd9627cb1773fea71cb7631",
+    "iclr2027_multistep_reach_avoid_confirmation_v2_episode_records.csv": "c4c9b0973641b5c9723c28fbd39c0c3fda317b0e1272c7cb2f2edfa05a89538f",
+    "iclr2027_multistep_reach_avoid_confirmation_v2_layouts.csv": "e6c985df49113123a68df567961483f70dd60827cfcad68793fa545f74ce6afc",
+    "iclr2027_multistep_reach_avoid_confirmation_v2_paired_summary.csv": "04c18c263c7940d05a49f6a68700c131d88b135f2618f4a0399b42a7728e091f",
+    "iclr2027_multistep_reach_avoid_confirmation_v2_rerun.json": "8eb42eecd13b910172cb9f8858acc5e4ca03856cb819070e3fa86ce2dfb770a7",
+    "iclr2027_multistep_reach_avoid_confirmation_v2_summary.csv": "6a37699105f7b3bdf8f97bb6e9b1b5a2d0f40ce1fb4b849f76aae4eebf7fe030"
+  },
+  "primary_result": {
+    "layout_fraction_wilson95": [
+      0.9433759402071946,
+      1.0
+    ],
+    "layouts_with_any_moving_radius_attack": 64,
+    "moving_conditioning_imported_radius_attack_state_fraction": 1.0,
+    "moving_conditioning_imported_radius_attack_states": 448,
+    "moving_conditioning_success": 0.931640625,
+    "moving_fraction_full_kl_ratio_above_one": 0.609375,
+    "moving_maximum_full_kl_ratio": 1.4985486223332676,
+    "moving_median_maximum_full_kl_ratio": 1.0857324523415834,
+    "moving_runtime_ms": 0.18922331648241197,
+    "paired_actual_gaussian_proposal_difference_ci95": [
+      -3.36427001953125,
+      -2.9965576171875
+    ],
+    "paired_actual_gaussian_proposal_difference_projection_minus_moving": -3.18115234375,
+    "paired_final_distance_difference_ci95": [
+      -0.0164986761428119,
+      -0.0019869288104519068
+    ],
+    "paired_final_distance_difference_projection_minus_moving": -0.009238593857617784,
+    "paired_path_length_difference_ci95": [
+      -0.02761247846798403,
+      -0.004037781512387482
+    ],
+    "paired_path_length_difference_projection_minus_moving": -0.015603459264059705,
+    "paired_return_difference_ci95": [
+      0.04243783606710609,
+      0.3483638447561509
+    ],
+    "paired_return_difference_projection_minus_moving": 0.20009627197929533,
+    "paired_success_difference_ci95": [
+      0.001953125,
+      0.03125
+    ],
+    "paired_success_difference_projection_minus_moving": 0.0166015625,
+    "selected_projection_runtime_ms": 0.5181748860678681,
+    "selected_projection_success": 0.9482421875,
+    "theorem_backed_methods_with_attack_found": 0
+  },
+  "protocol": "REACH_AVOID_CONTROLLER_PROTOCOL_V2_20260830.json",
+  "status": "fresh_protocol_v2_confirmation_complete_and_reproduced"
+}

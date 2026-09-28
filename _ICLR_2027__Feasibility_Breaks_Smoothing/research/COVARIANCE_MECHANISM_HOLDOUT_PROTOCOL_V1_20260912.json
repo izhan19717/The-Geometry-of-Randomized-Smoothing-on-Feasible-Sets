@@ -1,0 +1,62 @@
+{
+  "status": "frozen_before_holdout_execution",
+  "experiment": "covariance-mechanism-holdout-v1",
+  "freeze_date": "2026-09-12",
+  "purpose": "Fresh targeted replication of the conditional-covariance mechanism in a stratum identified from the earlier random-product-box study.",
+  "selection_history": "The coherent, 16-mode, balanced-volume stratum and dimensions 10 and 20 were selected after inspection of the earlier holdout. The seeds below have not been instantiated. This study is a targeted replication and does not estimate prevalence over arbitrary feasible sets.",
+  "design": {
+    "geometry_family": "coherent",
+    "mode_count": 16,
+    "volume_ratio_cap": 1.0,
+    "dimensions": [10, 20],
+    "sigmas": [0.25, 0.5],
+    "normalized_distances": [0.05, 0.15],
+    "direction_protocols": ["independent", "top covariance"],
+    "replicates_per_dimension": 64,
+    "independent_analysis_units": 128,
+    "repeated_factor_rows": 1024,
+    "quadrature_order": 16
+  },
+  "seeds": {
+    "geometry_root": 3153969171,
+    "direction_root": 41458762,
+    "bootstrap_root_reserved_but_unused": 3400840692,
+    "derivation": "First eight hexadecimal digits of SHA-256 strings cov-geometry-holdout-2026-09-12, cov-direction-holdout-2026-09-12, and cov-bootstrap-holdout-2026-09-12, interpreted as unsigned integers."
+  },
+  "primary_analysis": {
+    "analysis_unit": "dimension-specific independently seeded base geometry",
+    "spectral_endpoint": "maximum finite KL to Gaussian KL ratio over the four fixed sigma and normalized-distance combinations in the top-covariance direction",
+    "independent_endpoint": "maximum finite KL to Gaussian KL ratio over the same four combinations in the independently seeded direction",
+    "paired_difference": "spectral endpoint minus independent endpoint",
+    "paired_exceedance_test": "one-sided exact sign test among discordant geometry-level indicators with null probability one half",
+    "repeated_cell_statistics": "descriptive only unless reported within a fixed dimension, sigma, distance, and direction stratum"
+  },
+  "precommitted_checks": {
+    "maximum_direct_path_kl_absolute_error": 5e-9,
+    "minimum_sign_agreement_at_normalized_distance_0.05": 0.98,
+    "minimum_fixed_stratum_spearman_correlation": 0.95,
+    "minimum_fraction_with_positive_paired_difference": 0.9,
+    "minimum_median_paired_difference": 0.03,
+    "minimum_spectral_exceeding_geometries": 8,
+    "minimum_spectral_to_independent_exceedance_ratio": 4.0,
+    "failure_policy": "If the numerical identity check fails, retain the run and debug without replacing seeds. If the identity passes but a substantive check fails, retain all results and do not tune another holdout. Main-text inclusion depends on the frozen checks rather than favorable visual selection."
+  },
+  "figure_specification": {
+    "panel_a": "Anchor directional covariance ratio against finite KL ratio for every retained factor row, with direction rules separated and equality and unit lines shown.",
+    "panel_b": "Maximum independent-direction ratio against maximum top-covariance ratio for every base geometry, with dimensions separated and equality and unit lines shown.",
+    "path_identity_role": "Numerical implementation check, not empirical discovery."
+  },
+  "provenance": {
+    "experiment_script_sha256": "b1650a131639f5899deba4e8aada87731327cd1823b68b58e7b1566250d1afb5",
+    "test_sha256": "43b0e5ad7f8bad7dc3b88de2e91f3135d3603e29b5ccdee6b24c68b91a89ef5d",
+    "kl_exact_sha256": "d28a4e8c9f643b7cc15c002784f5a976268678a521ee0da77f732ee58ebafcba",
+    "random_box_ensemble_sha256": "0d2e58e67258600542a9751a5e79d03ade300ae719ae4784d7f4ade4082fc11e",
+    "filtered_certificate_sha256": "6acd5f32bd092c5962f7636c83f863470aa92715f0069395f3c0e0a277833bae",
+    "development_test_seeds": [20260713, 73102062],
+    "python_packages": {
+      "numpy": "2.5.0",
+      "scipy": "1.18.0",
+      "matplotlib": "3.11.0"
+    }
+  }
+}

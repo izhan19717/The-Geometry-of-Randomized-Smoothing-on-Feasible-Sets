@@ -1,0 +1,15 @@
+{
+  "attempts_sha256": "4b0e64372273cd2e02eb70c6068dfa0f3f9823785dcb0a0d66fe849516d7c58a",
+  "auditvotes_git_commit": "52b6a0db53947c815884ad62927d6af6dc584705",
+  "boundary_script_sha256": "3597438a2c75ae3e3ab67962100b5d9a9c111351e9c709eb246a4107f44dd79f",
+  "checkpoint_sha256": "420333fe0380cc437218c9b67c20bacf687932957da47340f900d4af5e05bd7c",
+  "completed": 128,
+  "evaluation_manifest_sha256": "32a48feea95f0d917c50e433fb08b65b640d882525a8eeee5e4a8100e49db8f5",
+  "evaluation_rows_sha256": "8aa2837b434483344949f74f9402d2e165bb937c1f782fa5f059339845254e82",
+  "images_sha256": "5aaedc268df8f4cffca2ac0cf9e608ae1897a8cddb630c7a850a2ea8f6558e75",
+  "labels_sha256": "1f9544300ded199539b6662364ce7fe6c2e1ea9f87408f06db4b1a6184cffb18",
+  "protocol_sha256": "888f085a41fca822c8c51344d17605036daee2a2e9b51d0f67c194b02b3c3db8",
+  "search_summary_sha256": "59797885e10605ac551091e2a799bfde9941b2d817c94ecabcc3b6d9016ca22c",
+  "status": "search_complete_confirmation_unopened",
+  "study_script_sha256": "239738766b2765f3b604dd8c47417585eab08c7a94db2329f586fd1d656dab29"
+}

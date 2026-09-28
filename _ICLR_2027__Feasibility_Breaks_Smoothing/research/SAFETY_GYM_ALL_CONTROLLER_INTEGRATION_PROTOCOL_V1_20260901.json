@@ -1,0 +1,58 @@
+{
+  "protocol_manifest_version": 1,
+  "status": "frozen_before_all_controller_engineering_gate",
+  "date": "2026-09-01",
+  "paper_eligibility": "none, engineering mechanics only",
+  "source_path": "experiments/iclr2027_safety_gym_all_controller_integration.py",
+  "source_sha256": "c345897f328bd907f66a98042eb18b16748e505125d79fe3a8c9cf5b5a2dc4f8",
+  "test_path": "tests/test_iclr2027_safety_gym_all_controller_integration.py",
+  "test_sha256": "85be20cb8a862b7c80899ca782ad00a8799c0c8ea574542d638910dfd9ad6f02",
+  "training_protocol_path": "_ICLR_2027__Feasibility_Breaks_Smoothing/research/SAFETY_GYM_SAFE_CONTROLLER_TRAINING_PROTOCOL_V2_20260901.json",
+  "training_protocol_sha256": "209320c2aec49834d51876c020b0bd00b131dafc437e41c1d16416ca2e7ba851",
+  "environment": "SafetyPointGoal2-v0",
+  "engineering_seed": 1570860784,
+  "activation_noise_seed": 1368584074,
+  "boundary_offset": 0.00025,
+  "controller_seeds": [1120275774, 1346831933, 658990255],
+  "runtime_source_sha256": {
+    "experiments/iclr2027_safety_gym_engineering_smoke.py": "eb4f4e8190023ad2d247af19ce29085982eede7b9af41ee83a016e6dd0ec45e5",
+    "src/feasible_robustness/totalized_ccfs.py": "a06f09809aa70a4b5f29291420b1419b0d372bb98df4721acddaef081e2fc5bf",
+    "src/feasible_robustness/ccfs.py": "6767063aa71ed322184300bc0434e49923db4a2c33693b46c504720da9eb7845"
+  },
+  "controller_artifact_sha256": {
+    "1120275774": {
+      "model499.pt": "6e9848d2d460acdc6d0ed13750c3ac0efdc4bced99513251152a0bc43601bb27",
+      "state499.pkl": "5aa037c609c224cd1c7d4e62dc15cc2e1db10ac1f180e25850375a3d9e648727",
+      "config.json": "325ac5e12ef4d67ca4b6a702aa111b5d8f5b0c8758c120c22c895f0396eb79ad",
+      "progress.csv": "f197d432b5057717f19b8de6f558e33f714901cf277f4cab0862f91bd8cf9a01"
+    },
+    "1346831933": {
+      "model499.pt": "b1905c25b06e39bdfccf3e7acc6e7532f6d21cdbea293a0397edb03ac5c2e4c2",
+      "state499.pkl": "547e9107f7ee2e1a2752830a448a941ed356c1d94b0958b41c204a390dbe46ae",
+      "config.json": "b50a7984196c0eec843375149a738fb783194d1ab96dbe537eda684056d4728b",
+      "progress.csv": "9ebfb7791c2d476f4e7b93406f7bd256a476c3acff29681201d43ca001b9c7b8"
+    },
+    "658990255": {
+      "model499.pt": "fdc29aa9e723faf3c252cba6b77165b74d7c0b237dd928b933c87d517cccebc0",
+      "state499.pkl": "ba65f1cb155662bae12b627fba6b1a3c9794a8f33f8475f15f9758fe79c8a341",
+      "config.json": "3299fa4114359ee79a7ebcf20148cf926eb317d8af02f494795bea25d7d84605",
+      "progress.csv": "e38e5d589ca480bcdffaedf20a56769a92df40aaa584b254a74aa5ac0df832d8"
+    }
+  },
+  "output_json": "output/iclr2027_safety_gym_all_controller_integration/result.json",
+  "output_md": "output/iclr2027_safety_gym_all_controller_integration/result.md",
+  "required_checks": [
+    "all terminal artifacts match exact hashes and training horizons",
+    "each actor repeats inference exactly and remains frozen",
+    "each queried transition executes with an identical serialized digest",
+    "each finite preverified negative fixture emits explicit abstention",
+    "abstention leaves simulator state and step counters unchanged"
+  ],
+  "claim_boundary": [
+    "No new environment or activation-noise seed is opened.",
+    "The finite negative fixture is not the benchmark fallback library.",
+    "The run checks mechanics rather than policy quality or population behavior.",
+    "Abstention is not a physical or safe action.",
+    "No development, validation, confirmation, or attack claim is made."
+  ]
+}

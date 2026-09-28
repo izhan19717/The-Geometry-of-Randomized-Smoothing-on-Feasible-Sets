@@ -1,0 +1,149 @@
+{
+  "candidates": [
+    {
+      "alternative_label": 5,
+      "index": 4924,
+      "joint_radius": 0.14490489528879302,
+      "original_label": 7,
+      "released_radius": 0.45810929597913236,
+      "true_label": 7
+    },
+    {
+      "alternative_label": 4,
+      "index": 4217,
+      "joint_radius": 0.09890335218463492,
+      "original_label": 0,
+      "released_radius": 0.3477561634223535,
+      "true_label": 0
+    },
+    {
+      "alternative_label": 3,
+      "index": 8654,
+      "joint_radius": 0.06864554528893907,
+      "original_label": 2,
+      "released_radius": 0.331888210507784,
+      "true_label": 2
+    },
+    {
+      "alternative_label": 3,
+      "index": 5169,
+      "joint_radius": 0.06825387608482997,
+      "original_label": 2,
+      "released_radius": 0.3209094051668982,
+      "true_label": 2
+    },
+    {
+      "alternative_label": 3,
+      "index": 5089,
+      "joint_radius": 0.09185791678003954,
+      "original_label": 6,
+      "released_radius": 0.3118715333530374,
+      "true_label": 6
+    },
+    {
+      "alternative_label": 4,
+      "index": 634,
+      "joint_radius": 0.08881187624115922,
+      "original_label": 7,
+      "released_radius": 0.30709003260795975,
+      "true_label": 7
+    },
+    {
+      "alternative_label": 0,
+      "index": 7686,
+      "joint_radius": 0.04950673692520202,
+      "original_label": 9,
+      "released_radius": 0.2987439705069864,
+      "true_label": 9
+    },
+    {
+      "alternative_label": 3,
+      "index": 1916,
+      "joint_radius": 0.0835085702792521,
+      "original_label": 9,
+      "released_radius": 0.2846139091035714,
+      "true_label": 9
+    },
+    {
+      "alternative_label": 3,
+      "index": 6665,
+      "joint_radius": 0.06798817227772747,
+      "original_label": 4,
+      "released_radius": 0.2845480382824842,
+      "true_label": 4
+    },
+    {
+      "alternative_label": 2,
+      "index": 7917,
+      "joint_radius": 0.05457968907311872,
+      "original_label": 6,
+      "released_radius": 0.2646890683842666,
+      "true_label": 6
+    },
+    {
+      "alternative_label": 3,
+      "index": 5211,
+      "joint_radius": 0.07773836285263613,
+      "original_label": 7,
+      "released_radius": 0.25724915612182264,
+      "true_label": 7
+    },
+    {
+      "alternative_label": 3,
+      "index": 3014,
+      "joint_radius": 0.044066805817049914,
+      "original_label": 6,
+      "released_radius": 0.243372156709323,
+      "true_label": 6
+    }
+  ],
+  "confirmation": {
+    "familywise_alpha": 0.001,
+    "inference_batch_size": 1024,
+    "proposals_per_endpoint": 1000000,
+    "test": "one-sided exact conditional binomial comparison of the declared winner against each of nine competitors"
+  },
+  "interpretation": {
+    "negative": "No confirmed pair means this fixed numerical search was inconclusive. It does not validate the released formula.",
+    "positive": "A reported pair requires different population conditional labels at the two endpoints with familywise confidence at least 0.999 and a stored L2 distance below the released radius.",
+    "prevalence": "The candidate set is selected from an opened full-test evaluation and cannot estimate prevalence."
+  },
+  "model": {
+    "confidence_threshold": 0.9,
+    "dataset": "CIFAR-10 test",
+    "noise_is_clipped": false,
+    "sigma": 0.25
+  },
+  "protocol_id": "AUDITVOTES_BOUNDARY_SEARCH_V1_20260906",
+  "provenance": {
+    "auditvotes_git_commit": "52b6a0db53947c815884ad62927d6af6dc584705",
+    "checkpoint_sha256": "420333fe0380cc437218c9b67c20bacf687932957da47340f900d4af5e05bd7c",
+    "core_py_sha256": "88b48ede52d90ddd8833a57c0675670a83bc932aca10d3b023e13db1d2c99b95",
+    "reference_rows_sha256": "26326634ca3e3f53dedbbf4291b4ba52e088b76a5f3978ba3784fde6dc8e7f96",
+    "search_script_sha256": "3597438a2c75ae3e3ab67962100b5d9a9c111351e9c709eb246a4107f44dd79f"
+  },
+  "search": {
+    "candidate_source": "correctly classified images whose selected conditional label differs from the unfiltered selected label, ranked by released radius",
+    "eot_proposals": 256,
+    "gradient_microbatch": 64,
+    "inference_batch_size": 1024,
+    "maximum_confirmed_pairs": 6,
+    "radius_factor": 0.999,
+    "restarts": 4,
+    "screen_proposals": 50000,
+    "selection_rule": "retain positive alternative-minus-original screen differences, rank by decreasing difference, break ties by the frozen candidate order, and select at most six",
+    "step_fraction": 0.08,
+    "steps": 150,
+    "temperatures": [
+      1.0,
+      0.5,
+      0.25
+    ]
+  },
+  "seeds": {
+    "confirmation": 2609061301,
+    "screen": 2609061201,
+    "search": 2609061101
+  },
+  "status": "frozen_before_boundary_search"
+}

@@ -1,0 +1,164 @@
+{
+  "files": {
+    "_ICLR_2027__Feasibility_Breaks_Smoothing/research/GOAL2_SAFE_TRAJECTORY_CONFIRMATION_V1_20260919.anonymous_rerun.json": {
+      "archive_sha256": "02916a86f70b3329485ad6a9160cc7005458a5a08f374af826066bd1ab0e3b40",
+      "derivative_role": "anonymous learned-controller rerun protocol",
+      "normalized_json_pointers": [],
+      "release_edited_json_pointers": [],
+      "source_sha256": "34f69b0f64367040720b67c4e365cac25a4e5afe32ca200c9e1bd72564c68d82"
+    },
+    "_ICLR_2027__Feasibility_Breaks_Smoothing/research/GOAL2_SAFE_TRAJECTORY_POSTRUN_INTEGRITY_V1_20260919.json": {
+      "archive_sha256": "ecbecce5516372a47134135312c019bf50dfb7e6349f02e7fecbddfe6b8e82d0",
+      "derivative_role": "anonymous retained-result audit record",
+      "normalized_json_pointers": [],
+      "release_edited_json_pointers": [],
+      "source_sha256": "c85d611cd509a81ba738bc14bd0108d5cea8a8ba8e1142a0d679fb4a9a978cdd"
+    },
+    "_ICLR_2027__Feasibility_Breaks_Smoothing/research/REACH_AVOID_CONFIRMATION_FREEZE_V2_1_20260831.json": {
+      "archive_sha256": "d3bd7306f47fbfc1fe1fe590ac15d76417e169be978925126a63374cb1de3b51",
+      "derivative_role": "anonymous freeze record bound to the release protocol",
+      "normalized_json_pointers": [],
+      "release_edited_json_pointers": [
+        "/protocol_sha256"
+      ],
+      "source_sha256": "910280637af9ba2278470b941320adf02506777a8d3434c4107a1a2cc81b8a5d"
+    },
+    "_ICLR_2027__Feasibility_Breaks_Smoothing/research/REACH_AVOID_CONFIRMATION_RESULTS_V2_20260831.json": {
+      "archive_sha256": "a2bfa87e9321eb28049f972fb062fe79153d9556919eb4b2718cccd323684015",
+      "derivative_role": "result manifest bound to anonymous release derivatives",
+      "normalized_json_pointers": [],
+      "release_edited_json_pointers": [
+        "/frozen_sha256/protocol",
+        "/frozen_sha256/freeze_manifest",
+        "/output_sha256/iclr2027_multistep_reach_avoid_confirmation_v2.json"
+      ],
+      "source_sha256": "e59fa81822d87fb4cbfcbe7971cf72c420a510d78035c648e6462b9cfddbf9cb"
+    },
+    "_ICLR_2027__Feasibility_Breaks_Smoothing/research/REACH_AVOID_CONTROLLER_PROTOCOL_V2_20260830.json": {
+      "archive_sha256": "2516d1ede131b8c4628705975e795740f8eb28b5a0d6829f1b48ae3fbb5bd81c",
+      "derivative_role": "anonymous protocol with editorial workflow note removed",
+      "normalized_json_pointers": [],
+      "release_edited_json_pointers": [
+        "/explicit_nonclaims"
+      ],
+      "source_sha256": "908de3f4f125ce4df53838fa4a98d5ca441dc96782e5fd680b062e6c06f100ca"
+    },
+    "_ICLR_2027__Feasibility_Breaks_Smoothing/research/SAFETY_GYM_ALL_CONTROLLER_INTEGRATION_PROTOCOL_V1_20260901.anonymous_rerun.json": {
+      "archive_sha256": "d565a2fe09eb239397794a6d7555d22c03806b1eb7613319c244ed44075cdbcd",
+      "derivative_role": "anonymous controller rerun protocol",
+      "normalized_json_pointers": [],
+      "release_edited_json_pointers": [],
+      "source_sha256": "4ef013502d066ede8c9a5e57012e4451ecaa8a7ee06a6c5c96606f2a772a091c"
+    },
+    "_ICLR_2027__Feasibility_Breaks_Smoothing/research/SAFETY_GYM_SAFE_CONTROLLER_TRAINING_PROTOCOL_V2_20260901.json": {
+      "archive_sha256": "8c1380b92a50ac00c4a87a0e2173f28265c2bac5a8fe4839dde2ad6d8364672c",
+      "derivative_role": "path-normalized anonymous copy",
+      "normalized_json_pointers": [
+        "/upstream/remote_checkout",
+        "/training/remote_run_root"
+      ],
+      "release_edited_json_pointers": [],
+      "source_sha256": "209320c2aec49834d51876c020b0bd00b131dafc437e41c1d16416ca2e7ba851"
+    },
+    "output/iclr2027_safety_gym_safe_controllers_v2/seed1120275774/config.json": {
+      "archive_sha256": "1125691834eb87f2adaa3d456ef69946dfd8b7ff1f1ca32856397519dc88de57",
+      "derivative_role": "path-normalized anonymous copy",
+      "normalized_json_pointers": [
+        "/log_dir"
+      ],
+      "release_edited_json_pointers": [],
+      "source_sha256": "325ac5e12ef4d67ca4b6a702aa111b5d8f5b0c8758c120c22c895f0396eb79ad"
+    },
+    "output/iclr2027_safety_gym_safe_controllers_v2/seed1346831933/config.json": {
+      "archive_sha256": "62006d5b37e49643da50eb6889c4266100a5274edd4733c1e0479cb8af846b81",
+      "derivative_role": "path-normalized anonymous copy",
+      "normalized_json_pointers": [
+        "/log_dir"
+      ],
+      "release_edited_json_pointers": [],
+      "source_sha256": "b50a7984196c0eec843375149a738fb783194d1ab96dbe537eda684056d4728b"
+    },
+    "output/iclr2027_safety_gym_safe_controllers_v2/seed658990255/config.json": {
+      "archive_sha256": "f3647db3982730e5ffe259b294bccdae6fb0ce803ff59dc2cdc78b9305cd11dc",
+      "derivative_role": "path-normalized anonymous copy",
+      "normalized_json_pointers": [
+        "/log_dir"
+      ],
+      "release_edited_json_pointers": [],
+      "source_sha256": "3299fa4114359ee79a7ebcf20148cf926eb317d8af02f494795bea25d7d84605"
+    },
+    "outputs/ICLR2027_GLOBAL_BAND_CIFAR102_PROTOCOL_V2_20260920.anonymous_rerun.json": {
+      "archive_sha256": "57281167c4ef4a1bead00ba0a134c0c98f6117a6691910f76584e71c7cf8661d",
+      "derivative_role": "anonymous external-confirmation rerun protocol",
+      "normalized_json_pointers": [],
+      "release_edited_json_pointers": [],
+      "source_sha256": "6535358475707999bd35d24275848926c0419a6fe23441f9b1e7af78b88e4a6a"
+    },
+    "outputs/iclr2027_global_band_cifar102_confirmation_v2/summary.json": {
+      "archive_sha256": "eaedd7e93046f3013e961ce23574157230ca8fb031af5610f52dec563a122867",
+      "derivative_role": "path-normalized anonymous copy",
+      "normalized_json_pointers": [
+        "/development_history_disclosure/all_pinned_training_side_filter_artifacts/0/path",
+        "/development_history_disclosure/all_pinned_training_side_filter_artifacts/1/path",
+        "/development_history_disclosure/all_pinned_training_side_filter_artifacts/2/path",
+        "/development_history_disclosure/failed_global_v1_source/path",
+        "/manifest_path"
+      ],
+      "release_edited_json_pointers": [],
+      "source_sha256": "4129d2b17d506da6bdb65f353411e9226d8d954aa18a0fdba1032d05fd4222c5"
+    },
+    "outputs/iclr2027_global_band_precision_replication_v1.json": {
+      "archive_sha256": "4c4e808639850885f46688098f854c2f507b99b2eb7983c0b68e6e3e329664f4",
+      "derivative_role": "path-normalized anonymous copy",
+      "normalized_json_pointers": [
+        "/all_pinned_learned_filter_results/0/path",
+        "/all_pinned_learned_filter_results/1/path",
+        "/all_pinned_learned_filter_results/2/path",
+        "/assets/checkpoint",
+        "/source_result/path"
+      ],
+      "release_edited_json_pointers": [],
+      "source_sha256": "cbd0544ffb3e3ec3ccff026230b037f6c78371d4ad6697838b1b7de50b31d170"
+    },
+    "outputs/iclr2027_global_stable_band_filter_development_v1.json": {
+      "archive_sha256": "1e9e33ff4e7c6c12539e026c4c7fc263865d0d9fc0c04aa8f2c21e9146d06bf3",
+      "derivative_role": "path-normalized anonymous copy",
+      "normalized_json_pointers": [
+        "/assets/checkpoint"
+      ],
+      "release_edited_json_pointers": [],
+      "source_sha256": "c4bc41b212015990c71f182006020df099e7622e415bfc1e031167855ad2e5ed"
+    },
+    "outputs/iclr2027_learned_band_filter_development_v1.json": {
+      "archive_sha256": "7590f41d55c26baaa76341f4eff1dcd36c248aa1ff25e495a8755a4351aace35",
+      "derivative_role": "path-normalized anonymous copy",
+      "normalized_json_pointers": [
+        "/assets/checkpoint"
+      ],
+      "release_edited_json_pointers": [],
+      "source_sha256": "c7097556463ab12fa617795375281b29b184327b88f0654378a6c2eefd1f37c6"
+    },
+    "outputs/iclr2027_learned_stable_band_filter_development_v2.json": {
+      "archive_sha256": "129739556b489ef0c02ff75c3f9c6feec4e98e3d8a5a7a928ef161ab836df924",
+      "derivative_role": "path-normalized anonymous copy",
+      "normalized_json_pointers": [
+        "/assets/checkpoint"
+      ],
+      "release_edited_json_pointers": [],
+      "source_sha256": "6b1c6b09addec09bb89e4b892d380e5e97a8b9c539324eb53f474c3d40eaf1fa"
+    },
+    "outputs/iclr2027_multistep_reach_avoid_confirmation_v2.json": {
+      "archive_sha256": "fc90c977e7d4701fb0a207764f3659a9d68299b252e8897ee244dc75571514cb",
+      "derivative_role": "retained result bound to the anonymous release protocol",
+      "normalized_json_pointers": [],
+      "release_edited_json_pointers": [
+        "/protocol_sha256",
+        "/explicit_nonclaims"
+      ],
+      "source_sha256": "bbbcb1a5fdd16cd4606fb7f499a47d58aef02e548e0131f0d5edf04b7185c46d"
+    }
+  },
+  "path_transformation": "Machine-specific project roots were removed from JSON path strings. No numeric result, model parameter, count, seed, or decision field was changed.",
+  "schema_version": 1,
+  "status": "anonymous_release_transform_record"
+}

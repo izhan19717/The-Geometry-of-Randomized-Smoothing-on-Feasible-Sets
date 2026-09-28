@@ -1,0 +1,302 @@
+{
+  "all_images_in_official_fixed_order": true,
+  "all_images_remain_in_denominator": true,
+  "all_records_run_without_outcome_based_early_stopping": true,
+  "clipping_performed": false,
+  "confidence": {
+    "allocated_error": 0.001,
+    "collection_fwer": 0.001,
+    "images": 2000,
+    "one_sided_tail_error": 1.5625e-08,
+    "one_sided_tails_per_image": 32,
+    "per_image_delta": 5e-07,
+    "tail_decomposition": {
+      "conditional_selected_lower_and_nine_competitor_uppers": 10,
+      "joint_selected_lower_and_nine_competitor_uppers": 10,
+      "joint_selected_upper_and_independently_selected_runner_lower": 2,
+      "unfiltered_selected_lower_and_nine_competitor_uppers": 10
+    },
+    "total_one_sided_tails": 64000,
+    "validity_conditional_on_independently_selected_labels": true
+  },
+  "development_history_disclosure": {
+    "all_pinned_training_side_filter_artifacts": [
+      {
+        "count": 3400,
+        "indices_sha256": "1fab694e6f4763abb7585a7fefe73b1a03bf955206ed6392bfae2d3dcfc881af",
+        "path": "outputs/iclr2027_global_stable_band_filter_development_v1.json",
+        "role": "filter source and exclusion source",
+        "sha256": "c4bc41b212015990c71f182006020df099e7622e415bfc1e031167855ad2e5ed",
+        "split_sha256": "56572fd20403ff13b11ee3387999b3c85816ca93a208669e9a017f5d6fbf0282",
+        "status": "open_development_failed_predeclared_gate"
+      },
+      {
+        "count": 4716,
+        "indices_sha256": "f3cb5400d47522bc36cae2f5e5c27f050bc3ec371ed21af57e406f89f6e97b23",
+        "path": "outputs/iclr2027_learned_band_filter_development_v1.json",
+        "role": "exclusion source",
+        "sha256": "c7097556463ab12fa617795375281b29b184327b88f0654378a6c2eefd1f37c6",
+        "split_sha256": "5140eaf60c6bf2877d6cd7fd522f5a02d462a7a41e78ed37ecd76f5a6644781f",
+        "status": "open_development_complete"
+      },
+      {
+        "count": 4716,
+        "indices_sha256": "35dcaddd21e65726217b19860650eed889a166561df7d090e5be0f2dbf73ea4d",
+        "path": "outputs/iclr2027_learned_stable_band_filter_development_v2.json",
+        "role": "exclusion source",
+        "sha256": "6b1c6b09addec09bb89e4b892d380e5e97a8b9c539324eb53f474c3d40eaf1fa",
+        "split_sha256": "6f9701a311d3b601bdc1f145add5214f68219ff3f9a606e374b73fcf1ecf2152",
+        "status": "open_development_complete"
+      }
+    ],
+    "failed_global_v1_source": {
+      "path": "outputs/iclr2027_global_stable_band_filter_development_v1.json",
+      "sha256": "c4bc41b212015990c71f182006020df099e7622e415bfc1e031167855ad2e5ed",
+      "source_candidate_grid_sha256": "96996feeedcdfacfbdc367fe92312b8c4ba106d5959ad908c06816444e0f9515",
+      "source_candidate_scores_sha256": "afbe310cc6c63c53b950ab7ea212a4a2232f40b000f9e9494418f7678c2304ae",
+      "source_selected_filter": {
+        "alpha": 0.0625,
+        "beta": 0.25,
+        "direction_bank_index": 110,
+        "direction_float64_sha256": "a641e5803b4c61e6f84794ff8f716ed4f984e7b89fa7778dc00684d6c61c6342",
+        "direction_slot_in_stable_bank": 0,
+        "offset_b": 0.10721304813989381
+      },
+      "source_split_sha256": "56572fd20403ff13b11ee3387999b3c85816ca93a208669e9a017f5d6fbf0282",
+      "source_status": "open_development_failed_predeclared_gate"
+    },
+    "full_adaptive_train_side_history_must_be_reported": true,
+    "passed_precision_result": {
+      "sha256": "cbd0544ffb3e3ec3ccff026230b037f6c78371d4ad6697838b1b7de50b31d170",
+      "status": "development_precision_replication_passed_predeclared_success_rule"
+    }
+  },
+  "development_precision_result_sha256": "cbd0544ffb3e3ec3ccff026230b037f6c78371d4ad6697838b1b7de50b31d170",
+  "development_precision_status": "development_precision_replication_passed_predeclared_success_rule",
+  "device": "NVIDIA GeForce RTX 4070 Ti",
+  "elapsed_seconds_this_invocation": 26991.745093021542,
+  "fixed_filter_proof_contract": {
+    "band_rule": "alpha <= abs(<u,z> + b) <= beta",
+    "direction_float64_sha256": "a641e5803b4c61e6f84794ff8f716ed4f984e7b89fa7778dc00684d6c61c6342",
+    "direction_is_unit_norm": true,
+    "filter_applied_before_classifier": true,
+    "global_image_independent_event": true,
+    "no_replacement_or_top_up": true,
+    "parameter_constraint": "0 < alpha < beta <= sigma",
+    "raw_unclipped_proposals": true
+  },
+  "manifest_path": "outputs/iclr2027_global_band_cifar102_confirmation_v2/manifest.json",
+  "manifest_sha256": "bc95397c28f5363a4fe0515de25ee1d907148dbe304d20fcb0cbbf7963613cbb",
+  "paper_eligibility": "paper-eligible external confirmation",
+  "paper_facing_disclosures": [
+    "Report all 2,000 opened outcomes even when the success rule fails.",
+    "This is a finite balanced benchmark census, not a random sample from CIFAR-10.2.",
+    "McNemar is secondary superpopulation-style paired evidence, not sampling uncertainty for this finite census or evidence across systems.",
+    "Disclose the full training-side adaptive search history, the failed global V1 decision, and the passed hash-pinned precision result.",
+    "External-holdout cleanliness relies on freezing filter, thresholds, code, and seeds before opening CIFAR-10.2.",
+    "The strong margin is not a lower confidence bound on a true robust-radius gap."
+  ],
+  "per_image_jsonl_sha256": "976a5b7d458b708cd556efa64a2c02acad10e71e858123988834807947e514df",
+  "pre_outcome_instrumentation_history": [
+    {
+      "correction": "validate the five arrays in the hash-pinned official NPZ rather than requiring an images-and-labels-only archive",
+      "failure_artifact_sha256": "13324f52a2381115122194daa28935884b63bc810d51ce314068befcac2e1577",
+      "image_outcomes_observed": 0,
+      "model_loaded": false,
+      "prior_protocol_sha256": "d0104e203ac3b3891d39a5b2654fd7a453143784edfffa9c22ae323c06225e6b",
+      "prior_runner_source_sha256": "643ad9c1d427475d8a08931f01734cc24f4569811b4f0347d607fd3323170f02",
+      "status": "failed_before_model_loading_and_before_any_image_evaluation"
+    }
+  ],
+  "predeclared_success_rule": {
+    "checks": {
+      "all_2000_records_complete": true,
+      "at_least_100_correct_images_have_covariance_lower_above_mass_upper_by_0_01": true,
+      "covariance_correct_certified_fraction_at_least_0_05_above_joint": true,
+      "filtered_accuracy_no_more_than_0_01_below_unfiltered": true,
+      "mean_retention_at_least_0_25": true,
+      "mean_retention_at_most_0_60": true,
+      "one_sided_exact_mcnemar_p_at_most_0_001": true
+    },
+    "interpretation": {
+      "estimand": "finite balanced CIFAR-10.2 benchmark census; the overall fraction is also the ten-class macro-average because each class contributes exactly 200 images",
+      "generalizes_across_models_filters_or_systems": false,
+      "mcnemar_is_sampling_uncertainty_for_finite_census": false,
+      "mcnemar_role": "secondary superpopulation-style paired evidence",
+      "runner_upper_bound_reason": "the largest population competitor mass is at least the mass of the independently selected runner, so the runner lower confidence bound yields a conservative r_mass_U",
+      "strong_margin_endpoint": "population covariance-certificate radius versus the standard population joint-mass Gaussian radius for the independently selected filtered label and runner",
+      "strong_margin_is_true_robust_radius_gap_lower_bound": false
+    },
+    "observed": {
+      "all_records_complete": true,
+      "class_stratified_descriptive_summaries": {
+        "0": {
+          "class_name": "airplane",
+          "correct_strong_margin_count": 26,
+          "covariance_correct_certified_fraction_at_radius_0_20": 0.28,
+          "filtered_selection_accuracy": 0.505,
+          "images": 200,
+          "joint_correct_certified_fraction_at_radius_0_20": 0.25,
+          "mean_estimation_retention": 0.42040674999999994,
+          "unfiltered_selection_accuracy": 0.505
+        },
+        "1": {
+          "class_name": "automobile",
+          "correct_strong_margin_count": 35,
+          "covariance_correct_certified_fraction_at_radius_0_20": 0.42,
+          "filtered_selection_accuracy": 0.64,
+          "images": 200,
+          "joint_correct_certified_fraction_at_radius_0_20": 0.385,
+          "mean_estimation_retention": 0.4178697,
+          "unfiltered_selection_accuracy": 0.64
+        },
+        "2": {
+          "class_name": "bird",
+          "correct_strong_margin_count": 34,
+          "covariance_correct_certified_fraction_at_radius_0_20": 0.275,
+          "filtered_selection_accuracy": 0.505,
+          "images": 200,
+          "joint_correct_certified_fraction_at_radius_0_20": 0.21,
+          "mean_estimation_retention": 0.43727649999999996,
+          "unfiltered_selection_accuracy": 0.51
+        },
+        "3": {
+          "class_name": "cat",
+          "correct_strong_margin_count": 44,
+          "covariance_correct_certified_fraction_at_radius_0_20": 0.25,
+          "filtered_selection_accuracy": 0.545,
+          "images": 200,
+          "joint_correct_certified_fraction_at_radius_0_20": 0.19,
+          "mean_estimation_retention": 0.423954,
+          "unfiltered_selection_accuracy": 0.54
+        },
+        "4": {
+          "class_name": "deer",
+          "correct_strong_margin_count": 34,
+          "covariance_correct_certified_fraction_at_radius_0_20": 0.34,
+          "filtered_selection_accuracy": 0.585,
+          "images": 200,
+          "joint_correct_certified_fraction_at_radius_0_20": 0.275,
+          "mean_estimation_retention": 0.4315948,
+          "unfiltered_selection_accuracy": 0.585
+        },
+        "5": {
+          "class_name": "dog",
+          "correct_strong_margin_count": 34,
+          "covariance_correct_certified_fraction_at_radius_0_20": 0.49,
+          "filtered_selection_accuracy": 0.66,
+          "images": 200,
+          "joint_correct_certified_fraction_at_radius_0_20": 0.42,
+          "mean_estimation_retention": 0.41530429999999996,
+          "unfiltered_selection_accuracy": 0.655
+        },
+        "6": {
+          "class_name": "frog",
+          "correct_strong_margin_count": 35,
+          "covariance_correct_certified_fraction_at_radius_0_20": 0.47,
+          "filtered_selection_accuracy": 0.665,
+          "images": 200,
+          "joint_correct_certified_fraction_at_radius_0_20": 0.41,
+          "mean_estimation_retention": 0.43697415000000006,
+          "unfiltered_selection_accuracy": 0.665
+        },
+        "7": {
+          "class_name": "horse",
+          "correct_strong_margin_count": 32,
+          "covariance_correct_certified_fraction_at_radius_0_20": 0.52,
+          "filtered_selection_accuracy": 0.745,
+          "images": 200,
+          "joint_correct_certified_fraction_at_radius_0_20": 0.49,
+          "mean_estimation_retention": 0.42509495,
+          "unfiltered_selection_accuracy": 0.74
+        },
+        "8": {
+          "class_name": "ship",
+          "correct_strong_margin_count": 29,
+          "covariance_correct_certified_fraction_at_radius_0_20": 0.585,
+          "filtered_selection_accuracy": 0.77,
+          "images": 200,
+          "joint_correct_certified_fraction_at_radius_0_20": 0.535,
+          "mean_estimation_retention": 0.4371566,
+          "unfiltered_selection_accuracy": 0.77
+        },
+        "9": {
+          "class_name": "truck",
+          "correct_strong_margin_count": 26,
+          "covariance_correct_certified_fraction_at_radius_0_20": 0.515,
+          "filtered_selection_accuracy": 0.695,
+          "images": 200,
+          "joint_correct_certified_fraction_at_radius_0_20": 0.46,
+          "mean_estimation_retention": 0.43007219999999996,
+          "unfiltered_selection_accuracy": 0.69
+        }
+      },
+      "correct_strong_margin_count": 329,
+      "covariance_correct_certified_count_at_radius_0_20": 829,
+      "covariance_correct_certified_fraction_at_radius_0_20": 0.4145,
+      "denominator": 2000,
+      "filtered_model_call_fraction": 0.42756495454545457,
+      "filtered_model_calls": 94064290,
+      "filtered_raw_proposals": 220000000,
+      "filtered_selection_accuracy": 0.6315,
+      "filtered_selection_correct": 1263,
+      "joint_correct_certified_count_at_radius_0_20": 725,
+      "joint_correct_certified_fraction_at_radius_0_20": 0.3625,
+      "max_estimation_retention": 0.48908,
+      "mcnemar": {
+        "alternative": "covariance correct-certified accuracy is greater",
+        "covariance_only": 104,
+        "discordant": 104,
+        "exact_one_sided_p_value": 4.930380657631324e-32,
+        "joint_only": 0
+      },
+      "mean_estimation_retention": 0.427570395,
+      "mean_label_selection_retention": 0.42751055000000004,
+      "min_estimation_retention": 0.01664,
+      "records": 2000,
+      "total_model_calls": 314064290,
+      "unfiltered_correct_certified_count_at_radius_0_20": 948,
+      "unfiltered_correct_certified_fraction_at_radius_0_20": 0.474,
+      "unfiltered_model_call_fraction": 1.0,
+      "unfiltered_model_calls": 220000000,
+      "unfiltered_raw_proposals": 220000000,
+      "unfiltered_selection_accuracy": 0.63,
+      "unfiltered_selection_correct": 1260
+    },
+    "passed_predeclared_success_rule": true,
+    "thresholds": {
+      "denominator": 2000,
+      "maximum_exact_one_sided_mcnemar_p": 0.001,
+      "maximum_filtered_accuracy_drop": 0.01,
+      "maximum_mean_retention": 0.6,
+      "minimum_correct_strong_images": 100,
+      "minimum_correct_strong_margin": 0.01,
+      "minimum_covariance_over_joint_certified_fraction": 0.05,
+      "minimum_mean_retention": 0.25,
+      "target_radius": 0.2
+    }
+  },
+  "protocol_sha256": "6535358475707999bd35d24275848926c0419a6fe23441f9b1e7af78b88e4a6a",
+  "raw_filter_applied_before_classifier": true,
+  "reporting_and_interpretation": {
+    "class_stratified_descriptive_summaries_required": true,
+    "external_holdout_clean_only_if_frozen_before_opening": true,
+    "failed_global_v1_decision_must_be_disclosed": true,
+    "finite_balanced_benchmark_census": true,
+    "full_training_side_adaptive_history_must_be_disclosed": true,
+    "macro_average_over_200_images_per_class": true,
+    "mcnemar_does_not_establish_generalization_across_systems": true,
+    "mcnemar_is_not_sampling_uncertainty_for_the_finite_census": true,
+    "mcnemar_is_secondary_superpopulation_style_evidence": true,
+    "no_post_opening_filter_threshold_code_or_seed_retuning": true,
+    "passed_precision_result_and_hash_must_be_disclosed": true,
+    "pre_outcome_instrumentation_failure_must_be_disclosed": true,
+    "report_all_opened_outcomes_even_if_success_rule_fails": true,
+    "resume_tail_recovery": "discard at most one unterminated final byte fragment; never discard a newline-terminated record"
+  },
+  "resume_unterminated_tail_bytes_discarded_this_invocation": 0,
+  "status": "external_confirmation_passed_predeclared_success_rule",
+  "study_role": "frozen-filter CIFAR-10.2 full-test external confirmation",
+  "top_up_proposals_drawn": false,
+  "torch_version": "2.2.2+cu121"
+}

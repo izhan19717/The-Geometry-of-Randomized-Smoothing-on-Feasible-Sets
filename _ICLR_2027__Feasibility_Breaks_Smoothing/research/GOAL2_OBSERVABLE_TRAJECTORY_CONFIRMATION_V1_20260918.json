@@ -1,0 +1,57 @@
+{
+  "status": "frozen_before_confirmation_v1",
+  "freeze_date": "2026-09-18",
+  "study_role": "held_out_learned_controller_trajectory_evaluation",
+  "paper_eligibility": "conditional_on_checks_and_results",
+  "task": "SafetyPointGoal2-v0",
+  "safety_gymnasium_version": "1.0.0",
+  "controller_seed": 1637115473,
+  "controller_directory": "Fast-Autoencoder-Based-Projections/output/iclr2027_safety_point_goal_controller_seed1637115473",
+  "controller_sha256": "ca2d08be73da17b14e18dc69747a96c3de93d5a7aedc3091533dc10c01c14ee0",
+  "normalizer_sha256": "c3335d52c610b17e4397017ed34cc9fc1c89bbab44c527cb951a7c0a9f2f21a6",
+  "confirmation_source_sha256": "9882de3f362c383439992c92dbd673bae3468f3aa4af0474a6f384be68293fc7",
+  "runtime_source_sha256": "3877036e916b89185b5f25afab61eec75344eb1025263ab2cbc1915ce2cbe39a",
+  "dependency_source_sha256": {
+    "experiments/iclr2027_safety_gym_engineering_smoke.py": "eb4f4e8190023ad2d247af19ce29085982eede7b9af41ee83a016e6dd0ec45e5",
+    "experiments/iclr2027_safety_gym_push1_trajectory_development.py": "894f1500a8a928ec20b0673a017b09b7870cfa405348217ae0f5ca848ee976e8"
+  },
+  "environment_observation": {
+    "dimension": 60,
+    "hazard_lidar_slice": [28, 44],
+    "forward_action_cap": "0.98 - 0.10 * clip(max(hazards_lidar), 0, 1)",
+    "steering_action_cap": 1.0,
+    "candidate_map": "coordinatewise clip to [-1,1]",
+    "fallback": "coordinatewise clip of the frozen actor center to the current caps"
+  },
+  "event": "first native goal before any positive native cost, environment stop, or 500-step horizon",
+  "horizon": 500,
+  "methods": ["matched_single", "correlated_four"],
+  "sigma": 0.2,
+  "rho_four": 0.9365079365079365,
+  "kappa": 1.05,
+  "noise_seed": 60128749,
+  "attack_rule": "pre-block shift opposite the clipped actor center, norm 0.02/sqrt(500) at each executed step",
+  "attack_budget": 0.02,
+  "pathwise_energy_bound": 0.0105,
+  "target_event_probability": 0.5,
+  "familywise_error": 0.001,
+  "trajectory_count": 256,
+  "seed_prefix": "goal2-observable-trajectory-confirmation-20260918-v1-",
+  "ordered_seed_sha256": "9ec1db2275a2b061285bf8e4881428228c2cb15c903f6c443f7b1da429f895e7",
+  "output_json": "outputs/iclr2027_goal2_observable_trajectory_confirmation_v1.json",
+  "predeclared_checks": [
+    "All source, dependency, controller, and normalizer hashes match.",
+    "The observation flattening order matches the pinned simulator.",
+    "The held-out seed list is disjoint from opened development labels.",
+    "Every attacked trajectory obeys the pathwise energy bound.",
+    "All four arms contain exactly 256 distinct environment seeds.",
+    "The confidence allocation is 0.0005 per nominal method.",
+    "No source, event, threshold, or endpoint is selected using confirmation results."
+  ],
+  "claim_limits": [
+    "The certificate concerns residual action-center shifts, not observation attacks.",
+    "The observation-only action constraint is a heuristic and does not assert native safety by itself.",
+    "The target 0.5 certificate is reported only if its simultaneous nominal lower bound exceeds 0.5.",
+    "The attacked arm is a diagnostic and cannot establish worst-case optimality or theorem validity by sampling."
+  ]
+}

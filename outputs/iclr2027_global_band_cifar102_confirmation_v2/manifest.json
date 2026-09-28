@@ -1,0 +1,39 @@
+{
+  "auditvotes_code_sha256": {
+    "architectures_py_sha256": "565460e47fef169dc1e9f687e795994b06f99713bd1f35ca4ee52b18a975239f",
+    "cifar_resnet_py_sha256": "ed8d764a01c6dcb8cf2e35866c1960ed45f9a1417e2ccf5c9c1ce89f3c06de95",
+    "core_py_sha256": "88b48ede52d90ddd8833a57c0675670a83bc932aca10d3b023e13db1d2c99b95",
+    "datasets_py_sha256": "3974f94ed26d9e47a2c4114c07f7d7c03a8b331ccd96a1edbdac497605e55da9"
+  },
+  "auditvotes_git_commit": "52b6a0db53947c815884ad62927d6af6dc584705",
+  "certificate_implementation_source_sha256": "0bdce21d64b5591182a2df196e31dcc4af164e5d7f96440b7e0a67541b9e5736",
+  "checkpoint_sha256": "420333fe0380cc437218c9b67c20bacf687932957da47340f900d4af5e05bd7c",
+  "cifar102_npz_bytes": 6393664,
+  "cifar102_npz_git_blob_sha1": "7a3829681be56af70ea80ec99cf3822e2f5edff3",
+  "cifar102_npz_sha256": "e4fd6462bd5141ed293acd52ea570952f65d1bfd4ec9b068f87742f75a7a632e",
+  "cifar102_repository_commit": "521467a52ad494b78ff9c70051099c0d9ba74d40",
+  "collection_fwer": 0.001,
+  "dataset_order": "all stored NPZ indices 0 through 1999",
+  "development_precision_result_sha256": "cbd0544ffb3e3ec3ccff026230b037f6c78371d4ad6697838b1b7de50b31d170",
+  "estimation_raw_proposals_per_stream_per_image": 100000,
+  "label_selection_raw_proposals_per_stream_per_image": 10000,
+  "mandatory_reporting_after_any_external_opening": true,
+  "no_outcome_based_early_stopping": true,
+  "one_sided_tails": 64000,
+  "precision_replication_source_sha256": "2b99ad9fd004dd793a59c77e3b898c8571639bb0f667f34a61d8eac7c9a5dc3a",
+  "protocol_sha256": "6535358475707999bd35d24275848926c0419a6fe23441f9b1e7af78b88e4a6a",
+  "resume_tail_recovery": "discard at most one unterminated final byte fragment; never discard a newline-terminated record",
+  "run_identity_sha256": "3f4ad83473135996228d74dfbebea2dd86b3b497a517ccdd820a5e577ec5b391",
+  "sampling_seed": 26092003,
+  "schema_version": 1,
+  "source_code_sha256": "80f55b2ff194b87bcf0faa55b43a85ba41b2c5bdaca38ae0edeb92df12beadda",
+  "status": "frozen_cifar102_confirmation_run_manifest",
+  "stream_names": [
+    "filtered_label_selection",
+    "filtered_estimation",
+    "unfiltered_label_selection",
+    "unfiltered_estimation"
+  ],
+  "stream_namespace": "global-band-cifar102-confirmation-v1",
+  "total_images": 2000
+}

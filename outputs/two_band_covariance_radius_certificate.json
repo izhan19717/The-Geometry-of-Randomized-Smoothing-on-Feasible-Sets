@@ -1,0 +1,102 @@
+{
+  "family": {
+    "affine_space": "R^2",
+    "sigma": "1",
+    "retained_set": "R x ([-1,-9/10] union [9/10,1])",
+    "nominal_center": [
+      "0",
+      "-1/10"
+    ],
+    "exact_decision_boundary": "second center coordinate equals 0",
+    "global_covariance_factor": "Lambda=1"
+  },
+  "method": "Exact Fraction arithmetic with alternating Gaussian integral bounds, an atanh logarithm bound, and outward square roots",
+  "analytic_guarantees": {
+    "factorization": "The first coordinate remains N(c_1,1) and is independent of the conditioned second coordinate",
+    "uniform_covariance": "The retained second coordinate lies in [-1,1], so Popoviciu gives variance at most 1 at every center; the free coordinate has variance 1",
+    "nonconvex_unbounded_support": "The two horizontal bands form a nonconvex set of infinite diameter",
+    "exact_boundary": "Reflection gives equal band masses at second-coordinate center 0; pointwise Gaussian likelihood ordering gives opposite strict order on either side"
+  },
+  "internal_tolerance": "1/10^55",
+  "published_decimal_digits": 20,
+  "intervals": {
+    "occupancy": {
+      "lower": "0.05078446622171157326",
+      "upper": "0.05078446622171157327",
+      "lower_rational": "2539223311085578663/50000000000000000000",
+      "upper_rational": "5078446622171157327/100000000000000000000"
+    },
+    "selected_joint_mass": {
+      "lower": "0.02779527323663719702",
+      "upper": "0.02779527323663719703",
+      "lower_rational": "1389763661831859851/50000000000000000000",
+      "upper_rational": "2779527323663719703/100000000000000000000"
+    },
+    "runner_joint_mass": {
+      "lower": "0.02298919298507437624",
+      "upper": "0.02298919298507437625",
+      "lower_rational": "287364912313429703/12500000000000000000",
+      "upper_rational": "18391354388059501/800000000000000000"
+    },
+    "selected_conditional_probability": {
+      "lower": "0.54731840865059743984",
+      "upper": "0.54731840865059743985",
+      "lower_rational": "3420740054066233999/6250000000000000000",
+      "upper_rational": "10946368173011948797/20000000000000000000"
+    },
+    "runner_conditional_probability": {
+      "lower": "0.45268159134940256015",
+      "upper": "0.45268159134940256016",
+      "lower_rational": "9053631826988051203/20000000000000000000",
+      "upper_rational": "2829259945933766001/6250000000000000000"
+    },
+    "substituted_conditional_radius": {
+      "lower": "0.11888914386462333130",
+      "upper": "0.11888914386462333131",
+      "lower_rational": "1188891438646233313/10000000000000000000",
+      "upper_rational": "11888914386462333131/100000000000000000000"
+    },
+    "joint_mass_radius": {
+      "lower": "0.04067994841241465132",
+      "upper": "0.04067994841241465133",
+      "lower_rational": "1016998710310366283/25000000000000000000",
+      "upper_rational": "4067994841241465133/100000000000000000000"
+    },
+    "categorical_kl_to_tie": {
+      "lower": "0.00448477200753198171",
+      "upper": "0.00448477200753198172",
+      "lower_rational": "448477200753198171/100000000000000000000",
+      "upper_rational": "112119300188299543/25000000000000000000"
+    },
+    "covariance_controlled_radius": {
+      "lower": "0.09470767664273030523",
+      "upper": "0.09470767664273030524",
+      "lower_rational": "9470767664273030523/100000000000000000000",
+      "upper_rational": "2367691916068257631/25000000000000000000"
+    },
+    "exact_boundary_distance": {
+      "lower": "0.10000000000000000000",
+      "upper": "0.10000000000000000000",
+      "lower_rational": "1/10",
+      "upper_rational": "1/10"
+    }
+  },
+  "certified": {
+    "selected_band_is_top": true,
+    "substituted_radius_crosses_exact_boundary": true,
+    "covariance_radius_beats_joint_mass": true,
+    "covariance_radius_is_more_than_twice_joint_mass": true,
+    "covariance_radius_below_exact_boundary": true,
+    "covariance_radius_recovers_more_than_94_percent": true,
+    "substituted_radius_exceeds_118_percent": true
+  },
+  "trust_assumptions": [
+    "Correctness of Python arbitrary-precision integers and fractions.Fraction",
+    "Correct implementation of the documented rational interval primitives",
+    "The factorization, Popoviciu variance bound, and radius formulas proved in the paper"
+  ],
+  "outside_trusted_computing_base": [
+    "NumPy, SciPy, mpmath, and platform floating-point transcendental functions",
+    "Monte Carlo and numerical quadrature"
+  ]
+}

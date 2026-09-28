@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "feasible-robustness"
+version = "0.1.0"
+description = "Feasible-set randomized smoothing experiments"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "scipy>=1.14",
+  "matplotlib>=3.9",
+  "pandas>=2.3",
+  "pypdf>=5.0",
+  "jax>=0.10",
+  "sympy>=1.14",
+  "mpmath>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+validated = ["python-flint==0.9.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [
+  ".git",
+  ".venv",
+  "data",
+  "outputs",
+  "tmp",
+]

@@ -1,0 +1,116 @@
+{
+  "algorithm": "SafePO PPO-Lagrangian",
+  "claim_boundary": [
+    "PPO-Lagrangian training does not prove trajectory safety, recursive feasibility, or nonempty feasible-action fibres.",
+    "Logged cost is a training diagnostic, not a CCFS result.",
+    "Any later benchmark must report every retained policy seed and must separately audit empty fibres, restoration, feasibility, task utility, and certificate accounting."
+  ],
+  "frozen_utc_date": "2026-09-01",
+  "implementation_caveats": [
+    "The upstream built-in evaluation branch resets eval_env but steps env; it is disabled and all evaluation will be post hoc.",
+    "The upstream actor is an unbounded Gaussian while the environment clips executed controls. Downstream deterministic centers are clipped in the common channel before residual smoothing.",
+    "The actor and normalizer are saved, but critics, optimizers, scheduler, and Lagrange state are not; interrupted training is not resumed.",
+    "cuDNN deterministic mode and explicit workspace settings improve reproducibility, but byte-identical CUDA output across hardware and driver versions is not claimed."
+  ],
+  "paper_eligibility": "controller checkpoints and training diagnostics only; no CCFS algorithm result",
+  "process_environment": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "MKL_NUM_THREADS": "4",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONHASHSEED": "equal to the run seed"
+  },
+  "protocol_version": 2,
+  "purpose": "Train three independently seeded cost-constrained controllers at the untouched SafePO default horizon before any learned-controller CCFS development, validation, or confirmation split is opened.",
+  "retention_and_failure_policy": [
+    "All three completed horizon checkpoints are retained and carried into the separately frozen controller audit; none is selected using CCFS behavior.",
+    "A failed training seed is reported as failed and is not silently restarted with a replacement seed.",
+    "The reward-only controller remains a disclosed engineering counterexample and is not relabeled as a safe baseline.",
+    "No learned-controller CCFS development, validation, or confirmation environment seed is opened during training.",
+    "The timestamped resolved run directory and SHA-256 of actor, normalizer, configuration, progress table, terminal log, and error log are recorded after each completion."
+  ],
+  "scientific_response_to_engineering_failure": "The reward-only controller reached a state whose complete 121-by-121 one-step action-grid audit had no zero-cost action. PPO-Lagrangian is a controller preconditioner intended to reduce visits to nonviable states; it is not treated as a proof that every reachable feasible-action fibre is nonempty.",
+  "seed_derivation": "seed = int(first eight hexadecimal characters of SHA256(UTF-8 label), 16) mod 2^31",
+  "software": {
+    "gpu": "NVIDIA GeForce RTX 4070 Ti",
+    "gpu_driver": "535.309.01",
+    "gymnasium": "0.28.1",
+    "gymnasium_robotics": "1.2.2",
+    "joblib": "1.5.3",
+    "mujoco": "2.3.3",
+    "numpy": "1.23.5",
+    "python": "3.10.12",
+    "safety_gymnasium": "1.0.0",
+    "sorted_pip_freeze_sha256": "99a187063ed84cd17d4e78084c5ec03bfaf4aada076e5a8b75593a9258d48467",
+    "torch": "2.2.2+cu121"
+  },
+  "source_sha256": {
+    "safepo/common/buffer.py": "a95d62c2a614c7704053672bdfb881433295a3c345ad1870f4adbabec0406e92",
+    "safepo/common/env.py": "d3229acf167bd693dbbf6ab3f4771b839c8d7ab45bad5c951d337e1c1e7d6b72",
+    "safepo/common/lagrange.py": "349cbb6078a5fdf4047f15955dd21f57785be38c6998caa394072915912b502b",
+    "safepo/common/logger.py": "e7b97a81c75660afb872d48d643340e0a5fa248ff0af74e404e65174a7bc4a8e",
+    "safepo/common/model.py": "6caab4818414e4640e4592430b0463f080d876fa4d1c3a9581083ca70c4eb442",
+    "safepo/common/wrappers.py": "94805f1852b1f607edf8df0ada847e51654e4d125b70d471255fce5c6be40b89",
+    "safepo/single_agent/ppo_lag.py": "a82dfabf48b773e3072ad20f0c080e7022f0abd22c0cc998c3aad919ad8b123c",
+    "safepo/utils/config.py": "0282185ace9824076bdf37844a6db04ecc342c140a8fa1cf95fac7c7cdcc27b7",
+    "scripts/launch_iclr2027_safety_gym_safe_controllers_vm_v2.sh": "e9cee89d30e210b34609dc3b09d276deda8340550750a7f91deae9b96a288993"
+  },
+  "status": "frozen before v2 launch",
+  "supersedes": "SAFETY_GYM_SAFE_CONTROLLER_TRAINING_PROTOCOL_V1_20260901.json",
+  "supersession_record": "SAFETY_GYM_SAFE_CONTROLLER_TRAINING_V1_SUPERSESSION_20260901.md",
+  "task": "SafetyPointGoal2-v0",
+  "training": {
+    "actor_learning_rate_schedule": "linear decay to zero over 500 epochs",
+    "actor_reward_critic_and_cost_critic_adam_learning_rate": 0.0003,
+    "batch_size": 64,
+    "checkpoint_selection": "the final horizon checkpoint model499.pt and matching state499.pkl; the 500-epoch default horizon is aligned with the upstream every-100-epochs saver",
+    "cost_limit": 25.0,
+    "device": "cuda:0",
+    "epochs": 500,
+    "gae_lambda": 0.95,
+    "gamma": 0.99,
+    "hidden_sizes": [
+      64,
+      64
+    ],
+    "lagrangian_multiplier_initial_value": 0.001,
+    "lagrangian_multiplier_learning_rate": 0.035,
+    "local_steps_per_environment_per_epoch": 2000,
+    "max_gradient_norm": 40.0,
+    "maximum_learning_iterations": 40,
+    "parallel_environments": 10,
+    "ppo_clip": 0.2,
+    "remote_run_root": "safe_controller_runs_v2_20260901",
+    "steps_per_epoch": 20000,
+    "target_kl": 0.02,
+    "total_environment_steps": 10000000,
+    "use_upstream_online_eval": false
+  },
+  "training_seeds": [
+    {
+      "id": "A",
+      "label": "ICLR2027-CCFS-SafetyGym-safe-controller-PPO-Lag-seed-A-2026-09-01",
+      "label_sha256": "42c60d3ebf85add671122503bca0a9dedb162f7a7e45140b29aff5084de478e7",
+      "seed": 1120275774
+    },
+    {
+      "id": "B",
+      "label": "ICLR2027-CCFS-SafetyGym-safe-controller-PPO-Lag-seed-B-2026-09-01",
+      "label_sha256": "5047063da62cee644561962ff157a8128e06eacb42bed1f20c570967ddfc4fa6",
+      "seed": 1346831933
+    },
+    {
+      "id": "C",
+      "label": "ICLR2027-CCFS-SafetyGym-safe-controller-PPO-Lag-seed-C-2026-09-01",
+      "label_sha256": "a74764af0cbb392eaada8c4de6280a691e4b908ec65a86b5a008b4a86ee6e164",
+      "seed": 658990255
+    }
+  ],
+  "upstream": {
+    "commit": "8d0fa763b5e9091db8bed502b7efe76f81b1d263",
+    "remote_checkout": "Safe-Policy-Optimization",
+    "repository": "https://github.com/PKU-MARL/Safe-Policy-Optimization",
+    "required_clean_checkout": true,
+    "safepo_package_version": "1.0.1"
+  }
+}

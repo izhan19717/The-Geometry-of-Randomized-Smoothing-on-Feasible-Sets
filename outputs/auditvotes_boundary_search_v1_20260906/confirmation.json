@@ -1,0 +1,426 @@
+{
+  "elapsed_seconds": 903.2088654525578,
+  "familywise_alpha": 0.001,
+  "per_comparison_alpha": 9.259259259259259e-06,
+  "protocol_sha256": "b08c157557faeb8eb0a3d0f59c3fc2183b5398a513883dffaf2ea3448d4afd1d",
+  "rows": [
+    {
+      "alternative_label": 5,
+      "endpoints": [
+        {
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            965,
+            0,
+            52295,
+            0,
+            0
+          ],
+          "endpoint": "original",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "retained": 53260,
+          "winner": 7,
+          "winner_verified": true
+        },
+        {
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            17611,
+            0,
+            7182,
+            0,
+            0
+          ],
+          "endpoint": "perturbed",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "retained": 24793,
+          "winner": 5,
+          "winner_verified": true
+        }
+      ],
+      "index": 4924,
+      "inside_released_radius": true,
+      "l2_distance": 0.45765120723238983,
+      "label_change_verified": true,
+      "original_label": 7,
+      "released_radius": 0.45810929597913236
+    },
+    {
+      "alternative_label": 3,
+      "endpoints": [
+        {
+          "counts": [
+            0,
+            0,
+            27,
+            2345,
+            1,
+            51,
+            32339,
+            0,
+            0,
+            0
+          ],
+          "endpoint": "original",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "retained": 34763,
+          "winner": 6,
+          "winner_verified": true
+        },
+        {
+          "counts": [
+            0,
+            0,
+            20,
+            17483,
+            1,
+            43,
+            9196,
+            0,
+            0,
+            0
+          ],
+          "endpoint": "perturbed",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "retained": 26743,
+          "winner": 3,
+          "winner_verified": true
+        }
+      ],
+      "index": 5089,
+      "inside_released_radius": true,
+      "l2_distance": 0.3115596236874984,
+      "label_change_verified": true,
+      "original_label": 6,
+      "released_radius": 0.3118715333530374
+    },
+    {
+      "alternative_label": 3,
+      "endpoints": [
+        {
+          "counts": [
+            0,
+            0,
+            8736,
+            358,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "endpoint": "original",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "retained": 9094,
+          "winner": 2,
+          "winner_verified": true
+        },
+        {
+          "counts": [
+            0,
+            0,
+            2052,
+            4782,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "endpoint": "perturbed",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            5.181076339358267e-246,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "retained": 6834,
+          "winner": 3,
+          "winner_verified": true
+        }
+      ],
+      "index": 8654,
+      "inside_released_radius": true,
+      "l2_distance": 0.3315563233052051,
+      "label_change_verified": true,
+      "original_label": 2,
+      "released_radius": 0.331888210507784
+    },
+    {
+      "alternative_label": 3,
+      "endpoints": [
+        {
+          "counts": [
+            0,
+            0,
+            1,
+            1172,
+            18244,
+            31,
+            0,
+            12,
+            0,
+            0
+          ],
+          "endpoint": "original",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "retained": 19460,
+          "winner": 4,
+          "winner_verified": true
+        },
+        {
+          "counts": [
+            3,
+            0,
+            0,
+            7099,
+            5741,
+            17,
+            0,
+            8,
+            0,
+            0
+          ],
+          "endpoint": "perturbed",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            2.0856034413820036e-33,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "retained": 12868,
+          "winner": 3,
+          "winner_verified": true
+        }
+      ],
+      "index": 6665,
+      "inside_released_radius": true,
+      "l2_distance": 0.28426349453271293,
+      "label_change_verified": true,
+      "original_label": 4,
+      "released_radius": 0.2845480382824842
+    },
+    {
+      "alternative_label": 4,
+      "endpoints": [
+        {
+          "counts": [
+            0,
+            0,
+            36,
+            0,
+            1873,
+            0,
+            0,
+            36793,
+            0,
+            0
+          ],
+          "endpoint": "original",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "retained": 38702,
+          "winner": 7,
+          "winner_verified": true
+        },
+        {
+          "counts": [
+            0,
+            0,
+            33,
+            0,
+            12135,
+            0,
+            0,
+            11556,
+            0,
+            0
+          ],
+          "endpoint": "perturbed",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            8.653255000048633e-05,
+            0.0,
+            0.0
+          ],
+          "retained": 23724,
+          "winner": 4,
+          "winner_verified": false
+        }
+      ],
+      "index": 634,
+      "inside_released_radius": true,
+      "l2_distance": 0.3067828986962872,
+      "label_change_verified": false,
+      "original_label": 7,
+      "released_radius": 0.30709003260795975
+    },
+    {
+      "alternative_label": 3,
+      "endpoints": [
+        {
+          "counts": [
+            473,
+            0,
+            0,
+            1245,
+            4,
+            0,
+            0,
+            27299,
+            0,
+            0
+          ],
+          "endpoint": "original",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "retained": 29021,
+          "winner": 7,
+          "winner_verified": true
+        },
+        {
+          "counts": [
+            290,
+            0,
+            0,
+            7157,
+            1,
+            0,
+            0,
+            7754,
+            0,
+            0
+          ],
+          "endpoint": "perturbed",
+          "pairwise_pvalues": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.9999995154932428,
+            0.0,
+            0.0
+          ],
+          "retained": 15202,
+          "winner": 3,
+          "winner_verified": false
+        }
+      ],
+      "index": 5211,
+      "inside_released_radius": true,
+      "l2_distance": 0.25699187533433043,
+      "label_change_verified": false,
+      "original_label": 7,
+      "released_radius": 0.25724915612182264
+    }
+  ],
+  "search_summary_sha256": "ad96778b0698ab4ceb9491190ec474dac6d2b61412642fa14c9dc83e08aed245",
+  "selected_pair_count": 6,
+  "status": "confirmation_complete",
+  "verified_pair_count": 4
+}

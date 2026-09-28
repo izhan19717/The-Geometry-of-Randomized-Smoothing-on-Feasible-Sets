@@ -1,0 +1,30 @@
+{
+  "conditional_accuracy": 0.7603,
+  "gaussian_accuracy": 0.7867,
+  "gaussian_certified_accuracy": {
+    "0.0": 0.7867,
+    "0.3": 0.5525,
+    "0.5": 0.3917,
+    "0.7": 0.2403
+  },
+  "images": 10000,
+  "joint_certified_accuracy": {
+    "0.0": 0.7603,
+    "0.3": 0.5114,
+    "0.5": 0.3137,
+    "0.7": 0.1323
+  },
+  "joint_positive_fraction": 0.8872,
+  "mean_acceptance_rate": 0.49338607,
+  "median_joint_radius": 0.32933744908144147,
+  "median_joint_to_released_ratio_for_released_positive": 0.5481050140463848,
+  "median_released_radius": 0.6667851302205192,
+  "released_certified_accuracy": {
+    "0.0": 0.7603,
+    "0.3": 0.6835,
+    "0.5": 0.6007,
+    "0.7": 0.4406
+  },
+  "released_positive_fraction": 0.8941,
+  "total_elapsed_seconds": 7562.015792217106
+}

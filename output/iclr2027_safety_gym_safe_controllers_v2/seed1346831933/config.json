@@ -1,0 +1,28 @@
+{
+  "batch_size": 64,
+  "cost_limit": 25.0,
+  "device": "cuda",
+  "device_id": 0,
+  "exp_name": "SafetyPointGoal2-v0-ppo_lag-seed-1346831933",
+  "experiment": "ccfs_safe_ppo_lag_v2_seed1346831933",
+  "gamma": 0.99,
+  "headless": true,
+  "hidden_sizes": [
+    64,
+    64
+  ],
+  "lagrangian_multiplier_init": 0.001,
+  "lagrangian_multiplier_lr": 0.035,
+  "learning_iters": 40,
+  "log_dir": "safe_controller_runs_v2_20260901/ccfs_safe_ppo_lag_v2_seed1346831933/SafetyPointGoal2-v0/ppo_lag/seed-1346831933-2026-09-01-06-24-28",
+  "max_grad_norm": 40.0,
+  "num_envs": 10,
+  "randomize": false,
+  "seed": 1346831933,
+  "steps_per_epoch": 20000,
+  "target_kl": 0.02,
+  "task": "SafetyPointGoal2-v0",
+  "total_steps": 10000000,
+  "use_eval": false,
+  "write_terminal": false
+}

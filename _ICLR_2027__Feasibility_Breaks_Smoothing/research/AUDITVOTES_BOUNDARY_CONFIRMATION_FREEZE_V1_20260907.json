@@ -1,0 +1,65 @@
+{
+  "confirmation": {
+    "familywise_alpha": 0.001,
+    "inference_batch_size": 1024,
+    "maximum_pairs": 6,
+    "per_comparison_alpha": 0.00000925925925925926,
+    "proposals_per_endpoint": 1000000,
+    "seed": 2609061301,
+    "test": "one-sided exact conditional binomial comparison of each declared winner against each of nine competitors"
+  },
+  "freeze_timestamp_utc": "2026-09-07T11:53:52Z",
+  "inputs": {
+    "protocol_sha256": "b08c157557faeb8eb0a3d0f59c3fc2183b5398a513883dffaf2ea3448d4afd1d",
+    "reference_rows_sha256": "26326634ca3e3f53dedbbf4291b4ba52e088b76a5f3978ba3784fde6dc8e7f96",
+    "search_log_sha256": "d2fd9ac66d570792cdc268e81c941b049c357f167aba5732793175bb87fab71e",
+    "search_script_sha256": "3597438a2c75ae3e3ab67962100b5d9a9c111351e9c709eb246a4107f44dd79f",
+    "search_summary_sha256": "ad96778b0698ab4ceb9491190ec474dac6d2b61412642fa14c9dc83e08aed245"
+  },
+  "protocol_id": "AUDITVOTES_BOUNDARY_SEARCH_V1_20260906",
+  "selected": [
+    {
+      "alternative_label": 5,
+      "asset": "candidate_4924.npz",
+      "asset_sha256": "b4edd8309074bac630421aede92d2d43a60e1287a7d6308199a3a66b9f0b70c9",
+      "index": 4924,
+      "original_label": 7
+    },
+    {
+      "alternative_label": 3,
+      "asset": "candidate_5089.npz",
+      "asset_sha256": "622eb141d1862a88e361b79ce65bf8f7e0ada48916588d55c458c7eaa582168b",
+      "index": 5089,
+      "original_label": 6
+    },
+    {
+      "alternative_label": 3,
+      "asset": "candidate_8654.npz",
+      "asset_sha256": "6989787f5b265f7247c1b0d7da3ef9484063aa7ac0179e659ba265c67903a556",
+      "index": 8654,
+      "original_label": 2
+    },
+    {
+      "alternative_label": 3,
+      "asset": "candidate_6665.npz",
+      "asset_sha256": "ecd57e8897b7bda5b32f470c20ce8d05d1cf47714dabdfa07d74fcd16109acc9",
+      "index": 6665,
+      "original_label": 4
+    },
+    {
+      "alternative_label": 4,
+      "asset": "candidate_634.npz",
+      "asset_sha256": "d65ca89618764ac36ff72dd1e86e9a8e6fb830a0c7e42f87e7e1c041973f588c",
+      "index": 634,
+      "original_label": 7
+    },
+    {
+      "alternative_label": 3,
+      "asset": "candidate_5211.npz",
+      "asset_sha256": "62dc1a9b259ec9999ba05811a9d360c0758294e245725ef75942615c50960166",
+      "index": 5211,
+      "original_label": 7
+    }
+  ],
+  "status": "frozen_before_confirmation"
+}

@@ -1,0 +1,75 @@
+{
+  "status": "postrun_integrity_record_v1",
+  "date": "2026-09-19",
+  "scope": "Integrity and interpretation record made after the frozen run. It does not replace or amend the pre-run protocol.",
+  "result_path": "outputs/iclr2027_goal2_safe_trajectory_confirmation_v1.json",
+  "result_sha256": "132321cde3cf5246e77869b7d3a0783333adc72df8ed45a32a4d4da6b511c89e",
+  "protocol_path": "_ICLR_2027__Feasibility_Breaks_Smoothing/research/GOAL2_SAFE_TRAJECTORY_CONFIRMATION_V1_20260919.json",
+  "protocol_sha256": "34f69b0f64367040720b67c4e365cac25a4e5afe32ca200c9e1bd72564c68d82",
+  "integration_protocol_path": "_ICLR_2027__Feasibility_Breaks_Smoothing/research/SAFETY_GYM_ALL_CONTROLLER_INTEGRATION_PROTOCOL_V1_20260901.json",
+  "integration_protocol_sha256": "4ef013502d066ede8c9a5e57012e4451ecaa8a7ee06a6c5c96606f2a772a091c",
+  "previous_confirmation_protocol_path": "_ICLR_2027__Feasibility_Breaks_Smoothing/research/GOAL2_OBSERVABLE_TRAJECTORY_CONFIRMATION_V1_20260918.json",
+  "previous_confirmation_protocol_sha256": "c367c01db1c29f36cce62b3e0cdd68dce19c5913b6b196f5a607716ec79acbd8",
+  "opened_development_output_path": "outputs/iclr2027_goal2_safe_controller_open_pilot_v1.json",
+  "opened_development_output_sha256": "25170507fbe035cbb8f148a10f050b68abc2359b313b1ade58e0d837e1ae08f0",
+  "opened_development_prefixes": [
+    {
+      "prefix": "goal2-observable-trajectory-open-development-",
+      "count": 4
+    },
+    {
+      "prefix": "goal2-safe-controller-open-pilot-20260919-v1-",
+      "count": 32
+    }
+  ],
+  "result_versions": {
+    "python": "3.10.12",
+    "safety_gymnasium": "1.0.0",
+    "torch": "2.2.2+cu121"
+  },
+  "postrun_remote_environment": {
+    "python": "3.10.12",
+    "numpy": "1.23.5",
+    "scipy": "1.15.3",
+    "joblib": "1.5.3",
+    "torch": "2.2.2+cu121",
+    "safety_gymnasium": "1.0.0",
+    "mujoco": "2.3.3"
+  },
+  "files_sha256": {
+    "experiments/iclr2027_goal2_safe_trajectory_confirmation.py": "8fca4bfece765f9a573967fd7e835d2ae719483f5b1baf92f2257763c4483967",
+    "experiments/iclr2027_safety_gym_all_controller_integration.py": "c345897f328bd907f66a98042eb18b16748e505125d79fe3a8c9cf5b5a2dc4f8",
+    "experiments/iclr2027_safety_gym_engineering_smoke.py": "eb4f4e8190023ad2d247af19ce29085982eede7b9af41ee83a016e6dd0ec45e5",
+    "experiments/iclr2027_safety_gym_push1_trajectory_development.py": "894f1500a8a928ec20b0673a017b09b7870cfa405348217ae0f5ca848ee976e8",
+    "experiments/iclr2027_push1_observable_trajectory_pilot.py": "3877036e916b89185b5f25afab61eec75344eb1025263ab2cbc1915ce2cbe39a",
+    "experiments/iclr2027_safety_gym_push1_all_controller_integration.py": "af9de07640e0670e14ece3d0319705d3fb7f9ae9fc7f81cfbb0384a01d2910cc",
+    "src/feasible_robustness/totalized_ccfs.py": "a06f09809aa70a4b5f29291420b1419b0d372bb98df4721acddaef081e2fc5bf",
+    "src/feasible_robustness/ccfs.py": "6767063aa71ed322184300bc0434e49923db4a2c33693b46c504720da9eb7845",
+    "_ICLR_2027__Feasibility_Breaks_Smoothing/research/SAFETY_GYM_SAFE_CONTROLLER_TRAINING_PROTOCOL_V2_20260901.json": "209320c2aec49834d51876c020b0bd00b131dafc437e41c1d16416ca2e7ba851",
+    "tests/test_iclr2027_safety_gym_all_controller_integration.py": "85be20cb8a862b7c80899ca782ad00a8799c0c8ea574542d638910dfd9ad6f02"
+  },
+  "method_schedules": {
+    "correlated_four": {
+      "proposal_count": 4,
+      "sigma": 0.2,
+      "rho": 0.9365079365079365,
+      "kappa": 1.05
+    },
+    "matched_single": {
+      "proposal_count": 1,
+      "sigma": 0.19518001458970663,
+      "rho": 0.0,
+      "kappa": 1.0
+    }
+  },
+  "common_energy_charge": 26.249999999999996,
+  "field_interpretation": {
+    "records.event": "goal before positive native cost",
+    "certified_event": "no positive native cost until first goal or 500 executed steps, with early environment stop and nonfinite transition counted as failure"
+  },
+  "limitations": [
+    "The raw records contain aggregate trajectory statistics, not full per-step traces.",
+    "The result targets the uniform mixture over 256 fixed reset seeds.",
+    "The postrun environment record was collected after execution and is not a pre-run software lock."
+  ]
+}

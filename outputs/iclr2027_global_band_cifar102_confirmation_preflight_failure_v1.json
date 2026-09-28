@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-20",
+  "dataset_accessed": true,
+  "dataset_git_blob_sha1": "7a3829681be56af70ea80ec99cf3822e2f5edff3",
+  "dataset_sha256": "e4fd6462bd5141ed293acd52ea570952f65d1bfd4ec9b068f87742f75a7a632e",
+  "dataset_size_bytes": 6393664,
+  "failure_class": "pre_outcome_instrumentation_failure",
+  "failure_message": "CIFAR-10.2 NPZ must contain exactly images and labels",
+  "image_outcomes_observed": 0,
+  "model_loaded": false,
+  "protocol_path": "outputs/ICLR2027_GLOBAL_BAND_CIFAR102_PROTOCOL_V1_20260920.json",
+  "protocol_sha256": "d0104e203ac3b3891d39a5b2654fd7a453143784edfffa9c22ae323c06225e6b",
+  "reason": "The hash-pinned official NPZ also contains ti_indices, keywords, and label_names metadata arrays. The V1 loader rejected those official arrays before model loading.",
+  "runner_source_sha256": "643ad9c1d427475d8a08931f01734cc24f4569811b4f0347d607fd3323170f02",
+  "status": "failed_before_model_loading_and_before_any_image_evaluation"
+}

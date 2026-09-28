@@ -1,0 +1,180 @@
+Files already downloaded and verified
+index=4924 screen_difference=519 distance=0.45765120
+index=4217 screen_difference=8 distance=0.34740844
+index=8654 screen_difference=158 distance=0.33155632
+index=5169 screen_difference=-42 distance=0.32058853
+index=5089 screen_difference=468 distance=0.31155962
+index=634 screen_difference=90 distance=0.30678290
+index=7686 screen_difference=-39 distance=0.29844522
+index=1916 screen_difference=-309 distance=0.28432930
+index=6665 screen_difference=135 distance=0.28426349
+index=7917 screen_difference=-30 distance=0.26442441
+index=5211 screen_difference=13 distance=0.25699186
+index=3014 screen_difference=-5 distance=0.24312879
+{
+  "selected": [
+    {
+      "index": 4924,
+      "source": "restart_2_final",
+      "surrogate_objective": 0.01968630647752434,
+      "counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        884,
+        0,
+        365,
+        0,
+        0
+      ],
+      "original_count": 365,
+      "alternative_count": 884,
+      "screen_difference": 519,
+      "radius_limit": 0.45765118668315324,
+      "l2_distance": 0.45765119791030884,
+      "asset": "candidate_4924.npz",
+      "asset_sha256": "b4edd8309074bac630421aede92d2d43a60e1287a7d6308199a3a66b9f0b70c9",
+      "original_label": 7,
+      "alternative_label": 5,
+      "released_radius": 0.45810929597913236
+    },
+    {
+      "index": 5089,
+      "source": "restart_1_final",
+      "surrogate_objective": 0.023152648005634546,
+      "counts": [
+        0,
+        0,
+        0,
+        882,
+        0,
+        2,
+        414,
+        0,
+        0,
+        0
+      ],
+      "original_count": 414,
+      "alternative_count": 882,
+      "screen_difference": 468,
+      "radius_limit": 0.31155966181968436,
+      "l2_distance": 0.31155961751937866,
+      "asset": "candidate_5089.npz",
+      "asset_sha256": "622eb141d1862a88e361b79ce65bf8f7e0ada48916588d55c458c7eaa582168b",
+      "original_label": 6,
+      "alternative_label": 3,
+      "released_radius": 0.3118715333530374
+    },
+    {
+      "index": 8654,
+      "source": "restart_0_final",
+      "surrogate_objective": 0.0126859046285972,
+      "counts": [
+        0,
+        0,
+        97,
+        255,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "original_count": 97,
+      "alternative_count": 255,
+      "screen_difference": 158,
+      "radius_limit": 0.3315563222972762,
+      "l2_distance": 0.3315563201904297,
+      "asset": "candidate_8654.npz",
+      "asset_sha256": "6989787f5b265f7247c1b0d7da3ef9484063aa7ac0179e659ba265c67903a556",
+      "original_label": 2,
+      "alternative_label": 3,
+      "released_radius": 0.331888210507784
+    },
+    {
+      "index": 6665,
+      "source": "restart_2_final",
+      "surrogate_objective": 0.014217973919585347,
+      "counts": [
+        0,
+        0,
+        0,
+        417,
+        282,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "original_count": 282,
+      "alternative_count": 417,
+      "screen_difference": 135,
+      "radius_limit": 0.2842634902442017,
+      "l2_distance": 0.2842634916305542,
+      "asset": "candidate_6665.npz",
+      "asset_sha256": "ecd57e8897b7bda5b32f470c20ce8d05d1cf47714dabdfa07d74fcd16109acc9",
+      "original_label": 4,
+      "alternative_label": 3,
+      "released_radius": 0.2845480382824842
+    },
+    {
+      "index": 634,
+      "source": "restart_0_final",
+      "surrogate_objective": -0.0023779456969350576,
+      "counts": [
+        0,
+        0,
+        2,
+        0,
+        661,
+        0,
+        0,
+        571,
+        0,
+        0
+      ],
+      "original_count": 571,
+      "alternative_count": 661,
+      "screen_difference": 90,
+      "radius_limit": 0.30678294257535177,
+      "l2_distance": 0.30678290128707886,
+      "asset": "candidate_634.npz",
+      "asset_sha256": "d65ca89618764ac36ff72dd1e86e9a8e6fb830a0c7e42f87e7e1c041973f588c",
+      "original_label": 7,
+      "alternative_label": 4,
+      "released_radius": 0.30709003260795975
+    },
+    {
+      "index": 5211,
+      "source": "restart_2_final",
+      "surrogate_objective": 0.013437076937407255,
+      "counts": [
+        20,
+        0,
+        0,
+        373,
+        0,
+        0,
+        0,
+        360,
+        0,
+        0
+      ],
+      "original_count": 360,
+      "alternative_count": 373,
+      "screen_difference": 13,
+      "radius_limit": 0.25699190696570084,
+      "l2_distance": 0.2569918632507324,
+      "asset": "candidate_5211.npz",
+      "asset_sha256": "62dc1a9b259ec9999ba05811a9d360c0758294e245725ef75942615c50960166",
+      "original_label": 7,
+      "alternative_label": 3,
+      "released_radius": 0.25724915612182264
+    }
+  ],
+  "summary": "output/auditvotes_boundary_search_v1_20260906/search_summary.json"
+}

@@ -1,0 +1,24 @@
+{
+  "analysis": {
+    "familywise_alpha": 0.001,
+    "per_inference_alpha": 0.000008771929824561403,
+    "simultaneous_family_size": 114,
+    "test_family": "108 exact endpoint winner-versus-competitor tests and six nominal one-sided conditional-probability lower bounds"
+  },
+  "inputs": {
+    "confirmation_freeze_sha256": "fbb3468834ddd7938342c208cb77438d8010d87109bec271f7d077b0899af8ce",
+    "confirmation_log_sha256": "1933d56fc3e1c20f831811f146c18dd2017c7948b6b8cbeee94e82dbfdd64e1c",
+    "confirmation_output_sha256": "295deed165ac8e81487714897578c823007df3b8ec6198b710bd57bd9b1d683d",
+    "protocol_sha256": "b08c157557faeb8eb0a3d0f59c3fc2183b5398a513883dffaf2ea3448d4afd1d",
+    "search_summary_sha256": "ad96778b0698ab4ceb9491190ec474dac6d2b61412642fa14c9dc83e08aed245"
+  },
+  "interpretation": "The four verified pairs establish existence for this released model and filter. Candidate selection used an opened evaluation, so the count does not estimate prevalence.",
+  "outputs": {
+    "confirmation_analysis_sha256": "bee0956e5e582483817ddf13006ec7997376e70b971affd3e4a6a76b768eac74",
+    "confirmation_analysis_script_sha256": "1e76bf2cd88410f91dc07c2f64f3fc2bf12a529eb2a384e7051dc57bf208183c"
+  },
+  "status": "confirmation_complete",
+  "verified_indices": [4924, 5089, 8654, 6665],
+  "verified_pair_count": 4,
+  "selected_pair_count": 6
+}

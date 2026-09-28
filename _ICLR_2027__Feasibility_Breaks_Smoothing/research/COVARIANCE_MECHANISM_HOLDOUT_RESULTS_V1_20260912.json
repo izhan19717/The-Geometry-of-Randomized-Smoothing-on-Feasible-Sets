@@ -1,0 +1,29 @@
+{
+  "status": "fresh_targeted_holdout_complete",
+  "execution_date": "2026-09-12",
+  "protocol_sha256": "bfd0350ea0b6aea4697ff6f5493dc3b6db10edc795720928cf0ab9f2cd97ab02",
+  "factor_row_count": 1024,
+  "independent_geometry_count": 128,
+  "primary_results": {
+    "spectral_only_exceedance_count": 14,
+    "independent_only_exceedance_count": 0,
+    "one_sided_paired_sign_pvalue": 0.00006103515625,
+    "fraction_with_positive_paired_difference": 1.0,
+    "median_paired_difference": 0.0662915847675365
+  },
+  "mechanism_checks": {
+    "spearman_local_finite_all_repeated_cells": 0.999759338223379,
+    "minimum_fixed_stratum_spearman_correlation": 0.9940934065934065,
+    "minimum_sign_agreement_at_normalized_distance_0.05": 1.0,
+    "maximum_direct_path_kl_absolute_error": 1.7676832220203664e-15,
+    "maximum_ratio_identity_absolute_error": 1.35708111415056e-12
+  },
+  "precommitted_check_outcome": "All numerical and substantive main-text inclusion checks passed without changing the frozen protocol, seeds, factor grid, or figure specification.",
+  "interpretation": "This targeted holdout confirms the covariance-to-finite-KL mechanism in a stratum selected from an earlier study. It does not estimate the prevalence of divergence inflation over arbitrary feasible sets. The top-covariance direction is a declared geometry-adaptive stress direction. Crossing one diagnoses Gaussian KL-rate failure, not a label change.",
+  "output_sha256": {
+    "factor_rows.csv": "3624c187e48064b8c27a023828905b9482bfdaa51a1b55c48cc06ba4fae41205",
+    "summary.json": "d770886b59d40d767fd5deb76d59ce63e6a4f6457a65c1f126eb7854cb2b66ed",
+    "covariance_mechanism_holdout.pdf": "a185299241a0107ac33c3010f47d4fe8fc20bee1c86965a5824137ca0d605e8d",
+    "covariance_mechanism_holdout.png": "8033fdfb2ea03af4f0d6658fcc5537e5782a9535c6a74b34b53b929ae113aa3d"
+  }
+}

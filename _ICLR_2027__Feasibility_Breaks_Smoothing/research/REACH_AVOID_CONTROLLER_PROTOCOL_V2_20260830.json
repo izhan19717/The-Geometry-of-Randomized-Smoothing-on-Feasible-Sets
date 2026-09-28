@@ -1,0 +1,139 @@
+{
+  "bootstrap_resamples": 4000,
+  "bootstrap_seed": 1394297499,
+  "certificate_audit": {
+    "binary_event": "sampled next-state y is strictly above the current obstacle center",
+    "interpretation": "moving conditioning has no ambient Gaussian certificate; zero attacks against a sound method are not evidence of soundness",
+    "invalid_radius_attack": "compare the ambient Gaussian binary radius with the exact center distance to the event decision boundary",
+    "perturbation_grid": "16 equally spaced directions at radii 0.25, 0.50, and 0.75 sigma",
+    "projection_event_law": "exact pushforward probability under coordinatewise clipping, not a conditioned-rectangle probability"
+  },
+  "confidence_interval": "95% percentile cluster bootstrap over independent layouts; episodes are averaged within layout first",
+  "confirmation_freeze_requirements": [
+    "protocol-v1 artifacts and defect record retained",
+    "the single permitted diagnostic correction named before the protocol-v2 rerun",
+    "source, focused test, and protocol-v2 SHA-256 recorded",
+    "no distribution, sampler, method, metric, selection, layout, or seed change",
+    "fresh protocol-v2 confirmation executed only after the new freeze manifest",
+    "protocol-v2 confirmation rerun compared after removing wall-clock-only fields"
+  ],
+  "controller": {
+    "description": "interpolate lateral position toward the terminal goal; if the target is forbidden, enumerate four obstacle-face detours and minimize immediate travel plus Euclidean terminal cost",
+    "feasibility": "the selected nominal center is checked exactly against the current box-minus-rectangle support",
+    "name": "one-step receding-horizon goal-directed waypoint controller"
+  },
+  "cost_accounting": [
+    "one output action at every method-stage pair; the native controller uses zero random proposals",
+    "actual primitive random variates and inverse-CDF calls",
+    "actual moving-law rejection proposals",
+    "exact naive rejection-equivalent proposal expectation",
+    "wall-clock time reported as implementation-specific secondary evidence"
+  ],
+  "created_date": "2026-08-30",
+  "environment": {
+    "collision_semantics": "next-state waypoint membership in a closed rectangle; no swept-segment claim",
+    "dynamics": "discrete-time point robot; sampled feasible waypoint is the next state",
+    "episode_start_jitter_y": "Uniform[-0.12, 0.12]",
+    "gaussian_sigma": "Uniform[0.15, 0.23] independently by stage",
+    "goal_radius": 0.4,
+    "goal_y": "Uniform[-0.35, 0.35] with the final goal constrained feasible",
+    "horizon": 7,
+    "layout_start_y": "Uniform[-0.30, 0.30]",
+    "obstacle_center_x_offset": "Uniform[-0.12, 0.12] from stage center",
+    "obstacle_center_y": "Uniform[-0.50, 0.50]",
+    "obstacle_half_height": "Uniform[0.18, 0.38]",
+    "obstacle_half_width": "Uniform[0.11, 0.20]",
+    "repair_clearance": 0.025,
+    "stage_box_half_width_x": 0.38,
+    "stage_box_y_bounds": [
+      -1.35,
+      1.35
+    ],
+    "stage_spacing": 1.0
+  },
+  "experiment": "multistep_discrete_time_reach_avoid_controller_benchmark",
+  "explicit_nonclaims": [
+    "No learned policy, perception stack, continuous-time collision, or physical-robot claim.",
+    "Per-state anchor weights are frozen only within that state's certificate query; the theorem does not justify re-anchoring within a query.",
+    "Attack-found rates are diagnostic rates under this declared population, not universal prevalence.",
+    "The convex control is a certificate sanity check, not a collision-avoiding controller baseline.",
+    "The corrected calculation on the original protocol-v1 layouts is post hoc; protocol v2 therefore uses a fresh hash-derived confirmation population."
+  ],
+  "methods": [
+    "native_controller",
+    "moving_conditioned_gaussian",
+    "fixed_vertical_collision_repair",
+    "anchor_frozen_corridor_projection",
+    "fixed_uniform_conditioned_coarse4",
+    "anchor_frozen_conditioned_coarse4",
+    "anchor_frozen_conditioned_refined8"
+  ],
+  "negative_control": "Gaussian conditioned on the convex stage box, evaluated on the same nominal states and perturbation grid",
+  "parent_protocol": "REACH_AVOID_CONTROLLER_PROTOCOL_20260830.json",
+  "partition_sensitivity": {
+    "coarse4": "left, right, bottom, top",
+    "refined8": "left and right split at y=0; bottom and top split at obstacle-center x"
+  },
+  "post_freeze_disclosure": {
+    "correction": "For a clipping interval straddling the event threshold, use the unconditioned Gaussian tail; retain the exact zero and one cases when the complete interval lies below or above the threshold.",
+    "defect": "The protocol-v1 diagnostic for anchor_frozen_corridor_projection evaluated the binary upper event with a Gaussian conditioned on each clipping rectangle, while the executed sampler applies coordinatewise clipping to an unconditioned Gaussian draw.",
+    "pre_rerun_impact_check": "The maximum protocol-v1 versus corrected anchor probability discrepancy is 3.129236e-7 over the 448 confirmation states. The corrected radius-minus-boundary gap remains negative at all states; the closest gap is -6.471873e-5.",
+    "reporting_rule": "Retain protocol-v1 artifacts, write protocol-v2 artifacts under new names, execute a fresh 64-layout confirmation population whose seeds were hash-derived before execution, reproduce its deterministic digest, and disclose the correction and replication in the appendix.",
+    "scope": "This changes only the deterministic projection diagnostic. It does not change any sampler, controller, layout, seed, rollout, method selection, utility metric, cost metric, theorem, or other method audit."
+  },
+  "protocol_version": 2,
+  "scientific_question": "At fixed per-state feasible supports, how do moving conditioning and theorem-backed fixed-kernel alternatives trade task utility, certificate validity, and sampling cost in nonsymmetric multi-step navigation?",
+  "seed_derivation": {
+    "bootstrap_label": "ICLR2027-projection-audit-v2-bootstrap-2026-08-30",
+    "bootstrap_label_sha256": "d31b4a9a938c01ae0a9232c379b89045a621259034d59e2215191cd2e0cba5dc",
+    "episode_label": "ICLR2027-projection-audit-v2-episode-2026-08-30",
+    "episode_label_sha256": "cc938c42c353f4f9ed26a6f1b7c52b6c8ecc861e58a974321d313fb123c7947b",
+    "layout_label": "ICLR2027-projection-audit-v2-layout-2026-08-30",
+    "layout_label_sha256": "0b01edd8e06751d0e43833339224309ef7e4655bdd6c00a759e4ccdde910fde6",
+    "rule": "first four SHA-256 digest bytes interpreted big-endian, reduced modulo 2147483647"
+  },
+  "splits": {
+    "confirmation": {
+      "episode_seed": 1284738115,
+      "episodes_per_layout": 32,
+      "layout_count": 64,
+      "layout_seed": 184675800,
+      "permitted_use": "fresh held-out protocol-v2 confirmation reporting"
+    },
+    "development": {
+      "episode_seed": 14142135,
+      "episodes_per_layout": 12,
+      "layout_count": 12,
+      "layout_seed": 27182818,
+      "permitted_use": "implementation debugging and metric sanity checks"
+    },
+    "validation": {
+      "episode_seed": 17320508,
+      "episodes_per_layout": 16,
+      "layout_count": 20,
+      "layout_seed": 31415926,
+      "permitted_use": "original one-time design validation; protocol v2 does not reopen method selection"
+    }
+  },
+  "status": "predeclared_fresh_confirmation_after_disclosed_v1_diagnostic_defect",
+  "task_metrics": {
+    "final_distance": "Euclidean distance from final state to goal",
+    "path_length": "sum of Euclidean waypoint displacements",
+    "safety": "number of forbidden sampled waypoints (must be zero)",
+    "success": "final Euclidean distance to the feasible goal is at most 0.40",
+    "task_return": "10 * success - path_length - 2 * final_distance"
+  },
+  "validation_selection": {
+    "decision_date": "2026-08-30",
+    "eligible_methods": [
+      "fixed_vertical_collision_repair",
+      "anchor_frozen_corridor_projection",
+      "fixed_uniform_conditioned_coarse4",
+      "anchor_frozen_conditioned_coarse4",
+      "anchor_frozen_conditioned_refined8"
+    ],
+    "objective": "maximize mean validation task return among theorem-backed methods subject to zero forbidden waypoints and no more actual Gaussian proposals than moving conditioning",
+    "selected_primary_method": "anchor_frozen_corridor_projection",
+    "selection_scope": "The original validation selection is preserved because the corrected helper is used only for deterministic certificate audit; all predeclared methods remain reported."
+  }
+}

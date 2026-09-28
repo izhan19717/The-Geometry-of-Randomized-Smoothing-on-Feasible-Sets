@@ -1,0 +1,144 @@
+{
+  "anonymous_release_derivative": {
+    "original_protocol_sha256": "6535358475707999bd35d24275848926c0419a6fe23441f9b1e7af78b88e4a6a",
+    "purpose": "scientifically equivalent rerun with relative path metadata"
+  },
+  "auditvotes": {
+    "architecture": "cifar_resnet110",
+    "checkpoint_sha256": "420333fe0380cc437218c9b67c20bacf687932957da47340f900d4af5e05bd7c",
+    "git_commit": "52b6a0db53947c815884ad62927d6af6dc584705"
+  },
+  "confidence": {
+    "collection_fwer": 0.001,
+    "images": 2000,
+    "one_sided_tail_error": 1.5625e-08,
+    "one_sided_tails_per_image": 32,
+    "per_image_delta": 5e-07,
+    "tail_decomposition": {
+      "conditional_selected_lower_and_nine_competitor_uppers": 10,
+      "joint_selected_lower_and_nine_competitor_uppers": 10,
+      "joint_selected_upper_and_independently_selected_runner_lower": 2,
+      "unfiltered_selected_lower_and_nine_competitor_uppers": 10
+    },
+    "total_one_sided_tails": 64000,
+    "validity_conditional_on_independently_selected_labels": true
+  },
+  "dataset": {
+    "archive_keys": [
+      "images",
+      "labels",
+      "ti_indices",
+      "keywords",
+      "label_names"
+    ],
+    "byte_size": 6393664,
+    "filename": "cifar102_test.npz",
+    "git_blob_sha1": "7a3829681be56af70ea80ec99cf3822e2f5edff3",
+    "images": 2000,
+    "images_key": "images",
+    "images_per_class": 200,
+    "labels_key": "labels",
+    "name": "CIFAR-10.2 official test NPZ",
+    "order": "stored NPZ order, indices 0 through 1999",
+    "repository_commit": "521467a52ad494b78ff9c70051099c0d9ba74d40",
+    "sha256": "e4fd6462bd5141ed293acd52ea570952f65d1bfd4ec9b068f87742f75a7a632e"
+  },
+  "dependency_source_sha256": {
+    "certificate_implementation": "0bdce21d64b5591182a2df196e31dcc4af164e5d7f96440b7e0a67541b9e5736",
+    "precision_replication": "2b99ad9fd004dd793a59c77e3b898c8571639bb0f667f34a61d8eac7c9a5dc3a"
+  },
+  "development_precision_result": {
+    "required_passed_predeclared_success_rule": true,
+    "required_status": "development_precision_replication_passed_predeclared_success_rule",
+    "sha256": "4c4e808639850885f46688098f854c2f507b99b2eb7983c0b68e6e3e329664f4"
+  },
+  "fixed_filter_proof_contract": {
+    "band_rule": "alpha <= abs(<u,z> + b) <= beta",
+    "direction_float64_sha256": "a641e5803b4c61e6f84794ff8f716ed4f984e7b89fa7778dc00684d6c61c6342",
+    "direction_is_unit_norm": true,
+    "filter_applied_before_classifier": true,
+    "global_image_independent_event": true,
+    "no_replacement_or_top_up": true,
+    "parameter_constraint": "0 < alpha < beta <= sigma",
+    "raw_unclipped_proposals": true
+  },
+  "frozen_filter": {
+    "alpha": 0.0625,
+    "bank_seed": 26092001,
+    "bank_size": 128,
+    "beta": 0.25,
+    "direction_float64_sha256": "a641e5803b4c61e6f84794ff8f716ed4f984e7b89fa7778dc00684d6c61c6342",
+    "direction_index": 110,
+    "offset_b": 0.10721304813989381,
+    "sigma": 0.25
+  },
+  "paper_eligibility": "paper-eligible external confirmation",
+  "pre_outcome_instrumentation_history": [
+    {
+      "correction": "validate the five arrays in the hash-pinned official NPZ rather than requiring an images-and-labels-only archive",
+      "failure_artifact_sha256": "13324f52a2381115122194daa28935884b63bc810d51ce314068befcac2e1577",
+      "image_outcomes_observed": 0,
+      "model_loaded": false,
+      "prior_protocol_sha256": "d0104e203ac3b3891d39a5b2654fd7a453143784edfffa9c22ae323c06225e6b",
+      "prior_runner_source_sha256": "643ad9c1d427475d8a08931f01734cc24f4569811b4f0347d607fd3323170f02",
+      "status": "failed_before_model_loading_and_before_any_image_evaluation"
+    }
+  ],
+  "reporting_and_interpretation": {
+    "class_stratified_descriptive_summaries_required": true,
+    "external_holdout_clean_only_if_frozen_before_opening": true,
+    "failed_global_v1_decision_must_be_disclosed": true,
+    "finite_balanced_benchmark_census": true,
+    "full_training_side_adaptive_history_must_be_disclosed": true,
+    "macro_average_over_200_images_per_class": true,
+    "mcnemar_does_not_establish_generalization_across_systems": true,
+    "mcnemar_is_not_sampling_uncertainty_for_the_finite_census": true,
+    "mcnemar_is_secondary_superpopulation_style_evidence": true,
+    "no_post_opening_filter_threshold_code_or_seed_retuning": true,
+    "passed_precision_result_and_hash_must_be_disclosed": true,
+    "pre_outcome_instrumentation_failure_must_be_disclosed": true,
+    "report_all_opened_outcomes_even_if_success_rule_fails": true,
+    "resume_tail_recovery": "discard at most one unterminated final byte fragment; never discard a newline-terminated record"
+  },
+  "sampling": {
+    "clipping": false,
+    "filter_before_classifier": true,
+    "filtered_estimation_raw_proposals_per_image": 100000,
+    "filtered_selection_raw_proposals_per_image": 10000,
+    "four_independent_streams_per_image": true,
+    "inference_batch_size": 1024,
+    "seed": 26092003,
+    "stream_names": [
+      "filtered_label_selection",
+      "filtered_estimation",
+      "unfiltered_label_selection",
+      "unfiltered_estimation"
+    ],
+    "stream_namespace": "global-band-cifar102-confirmation-v1",
+    "top_up_after_rejection": false,
+    "unfiltered_estimation_raw_proposals_per_image": 100000,
+    "unfiltered_selection_raw_proposals_per_image": 10000
+  },
+  "source_code_sha256": "80f55b2ff194b87bcf0faa55b43a85ba41b2c5bdaca38ae0edeb92df12beadda",
+  "status": "frozen_before_cifar102_confirmation_execution",
+  "stopping_rule": "run all 2000 images without outcome-based early stopping",
+  "study_role": "frozen-filter CIFAR-10.2 full-test external confirmation",
+  "success_rule": {
+    "all_2000_records_complete": true,
+    "all_images_remain_in_denominator": true,
+    "joint_mass_upper_uses_independently_selected_runner": true,
+    "maximum_filtered_accuracy_drop_from_unfiltered": 0.01,
+    "maximum_one_sided_exact_mcnemar_p": 0.001,
+    "mean_retention_interval": [
+      0.25,
+      0.6
+    ],
+    "minimum_correct_strong_images": 100,
+    "minimum_correct_strong_margin": 0.01,
+    "minimum_covariance_accuracy_advantage_over_joint": 0.05,
+    "population_largest_competitor_mass_is_at_least_runner_mass": true,
+    "strong_endpoint_compares_population_covariance_certificate_radius_to_population_joint_mass_gaussian_radius": true,
+    "strong_margin_is_not_a_lower_bound_on_true_robust_radius_gap": true,
+    "target_radius": 0.2
+  }
+}

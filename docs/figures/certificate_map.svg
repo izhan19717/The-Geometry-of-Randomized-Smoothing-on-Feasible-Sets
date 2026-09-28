@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 290" role="img" aria-labelledby="title desc">
+  <title id="title">Two valid paths for certifying filtered Gaussian smoothing</title>
+  <desc id="desc">Gaussian proposals enter a fixed filter. Joint retained-label mass gives a Gaussian event certificate. Conditional votes require a proved geometry bound.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#486581"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="1158" height="288" rx="16" fill="#f7f9fc" stroke="#d7e0e9"/>
+  <rect x="28" y="87" width="242" height="96" rx="12" fill="#e8f1fb" stroke="#73a1d1" stroke-width="2"/>
+  <text x="149" y="123" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="bold" fill="#173b61">Gaussian proposals</text>
+  <text x="149" y="153" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#173b61">centered at a</text>
+  <path d="M 273 135 L 330 135" fill="none" stroke="#486581" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="339" y="87" width="236" height="96" rx="12" fill="#fff2db" stroke="#d69a38" stroke-width="2"/>
+  <text x="457" y="123" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="bold" fill="#684714">Fixed filter</text>
+  <text x="457" y="153" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#684714">retain or reject</text>
+  <path d="M 578 135 L 628 135 L 628 72 L 677 72" fill="none" stroke="#486581" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 628 135 L 628 206 L 677 206" fill="none" stroke="#486581" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="686" y="23" width="445" height="104" rx="12" fill="#e6f5ef" stroke="#529f7c" stroke-width="2"/>
+  <text x="908" y="60" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold" fill="#17553a">Joint event mass</text>
+  <text x="908" y="88" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#17553a">Count retained proposals by label</text>
+  <text x="908" y="112" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#17553a">Gaussian comparison always applies</text>
+  <rect x="686" y="157" width="445" height="104" rx="12" fill="#edeafa" stroke="#8779bb" stroke-width="2"/>
+  <text x="908" y="194" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="bold" fill="#42306c">Conditional vote</text>
+  <text x="908" y="222" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#42306c">Divide by retention probability</text>
+  <text x="908" y="246" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#42306c">Certify with a proved geometry bound</text>
+</svg>

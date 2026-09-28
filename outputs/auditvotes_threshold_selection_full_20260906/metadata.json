@@ -1,0 +1,10 @@
+{
+  "auditvotes_git_commit": "52b6a0db53947c815884ad62927d6af6dc584705",
+  "batch_size": 1024,
+  "checkpoint_sha256": "420333fe0380cc437218c9b67c20bacf687932957da47340f900d4af5e05bd7c",
+  "core_py_sha256": "88b48ede52d90ddd8833a57c0675670a83bc932aca10d3b023e13db1d2c99b95",
+  "device": "NVIDIA GeForce RTX 4070 Ti",
+  "protocol_sha256": "3b0a0d8bf904169bff7a3cf3bf4109f2ffcd7269402e719340f11fd26eb37edc",
+  "torch_version": "2.3.1+cu121",
+  "torchvision_version": "0.18.1+cu121"
+}

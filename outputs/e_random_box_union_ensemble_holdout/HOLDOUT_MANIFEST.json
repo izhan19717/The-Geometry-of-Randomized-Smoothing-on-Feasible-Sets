@@ -1,0 +1,58 @@
+{
+  "evidence_status": "untouched_holdout_seed_family",
+  "execution_date": "2026-07-13",
+  "protocol": "random-product-box-v2",
+  "selection_history": "The v2 generator and factorial design were frozen after a separate two-replicate development pilot. Root seeds 20260714 and 73102063 had not been evaluated before this single holdout execution. No design, seed, or analysis change was made after inspecting the holdout results.",
+  "command": "PYTHONPATH=src .venv/bin/python experiments/e_random_box_union_ensemble.py --root-seed 20260714 --direction-root-seed 73102063 --bootstrap-seed 91726032 --output-dir outputs/e_random_box_union_ensemble_holdout --report docs/e_random_box_union_ensemble_holdout_20260713.md",
+  "geometry_root_seed": 20260714,
+  "direction_root_seed": 73102063,
+  "bootstrap_seed": 91726032,
+  "replicates_per_fixed_stratum": 16,
+  "numeric_source_sha256_at_execution": {
+    "src/feasible_robustness/random_box_ensemble.py": "0d2e58e67258600542a9751a5e79d03ade300ae719ae4784d7f4ade4082fc11e",
+    "experiments/e_random_box_union_ensemble.py": "e50e3efb7ab5eedbd7521813696f48a43c06b51fc3b1f6141acf47ae97d11c3e",
+    "tests/test_random_box_union_ensemble.py": "e383c3636b653ebbbe10a1956fccedba04639b72ce89cacfcfa4da52787e1a7b"
+  },
+  "output_sha256": {
+    "e_random_box_union_ensemble.csv": "94a62fdae71bc577c8a50f816a81232f280602242c89a2bf768c51f8115cd267",
+    "e_random_box_union_ensemble.json": "470a4ea79378fde3d0f9fac968672f8dd11ed2f3f10eec19e86a6caa866be290",
+    "e_random_box_union_ensemble.png": "45b15d32c9e4fbe1c3dec38f00e2f8270a9da077433d61d1f4da365581ca6e70",
+    "e_random_box_union_ensemble.pdf": "c98758819ec0c7a1f3fdb73aa66c37428b97642ef5f197d0ad33a78c04f19db6"
+  },
+  "visualization_regeneration": {
+    "reason": "After the numerical holdout was frozen, the plots were regenerated from the unchanged CSV to overlay the rare ratio-above-one cells instead of hiding them as boxplot fliers. No numerical row or selection changed.",
+    "plot_script_sha256": "8acd622f653b6d72a7739adb8df0fbc7656dd87aead10a71a76f08c39b06f377"
+  },
+  "production_regeneration_20260812": {
+    "reason": "The retained script was rerun with the original frozen seeds solely to embed Type-42 fonts, enlarge plot typography, and shorten plot labels for print legibility. The numerical CSV, paired CSV, and strata CSV remained byte-identical; no design, seed, selection, or inferential calculation changed.",
+    "retained_script_sha256": "ba5b8170bf27852c69c48aabb2d8f8c585ddc7cf8bb0df85a711319c684eb41d",
+    "numeric_csv_byte_identical": true,
+    "paired_csv_byte_identical": true,
+    "strata_csv_byte_identical": true
+  },
+  "retained_script_reproduction_check": {
+    "date": "2026-08-12",
+    "retained_script_sha256": "ba5b8170bf27852c69c48aabb2d8f8c585ddc7cf8bb0df85a711319c684eb41d",
+    "original_execution_script_available": false,
+    "original_execution_script_sha256": "e50e3efb7ab5eedbd7521813696f48a43c06b51fc3b1f6141acf47ae97d11c3e",
+    "rerun_command": "PYTHONPATH=src .venv/bin/python experiments/e_random_box_union_ensemble.py --root-seed 20260714 --direction-root-seed 73102063 --bootstrap-seed 91726032 --output-dir tmp/random_box_holdout_rerun --report tmp/random_box_holdout_rerun/report.md",
+    "numeric_csv_byte_identical": true,
+    "paired_csv_byte_identical": true,
+    "strata_csv_byte_identical": true,
+    "rerun_numeric_csv_sha256": "94a62fdae71bc577c8a50f816a81232f280602242c89a2bf768c51f8115cd267",
+    "rerun_json_sha256": "acacfefcae2b3020ff3323588c044dcff31e65fca5b398e8a0362123d4efd0ac",
+    "json_difference": "The retained script adds design.independent_geometry_draw_count=384; after removing this reporting-only field, the rerun JSON is semantically identical to the recorded JSON.",
+    "inference_effect": "none"
+  },
+  "primary_counts": {
+    "whole_conditioning_cells": 6144,
+    "iid_direction_exceedances": 0,
+    "iid_direction_cells": 3072,
+    "spectral_stress_exceedances": 10,
+    "spectral_stress_cells": 3072,
+    "independent_base_geometry_draws": 384,
+    "base_geometries_with_any_exceedance": 5,
+    "maximum_ratio": 1.044797665628306
+  },
+  "inference_boundary": "The fixed-stratum Wilson and bootstrap intervals are pointwise and non-simultaneous. Factor cells reuse geometries and are not independent. The holdout quantifies only the declared synthetic generator, not real feasible-set prevalence."
+}

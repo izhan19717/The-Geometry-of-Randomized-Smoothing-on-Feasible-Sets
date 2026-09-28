@@ -1,0 +1,74 @@
+{
+  "status": "frozen_before_execution",
+  "frozen_utc": "2026-09-20T08:13:51Z",
+  "paper_eligibility": "none",
+  "study_role": "fixed-checkpoint CIFAR-10 training precision replication",
+  "dataset": "CIFAR-10 training split only",
+  "test_sets_accessed": [],
+  "source_code_sha256": "2b99ad9fd004dd793a59c77e3b898c8571639bb0f667f34a61d8eac7c9a5dc3a",
+  "focused_test_sha256": "82aaba860754a4d119e61cc11ba0aa083286835e95ad7e696fa906bcf040ce29",
+  "pinned_development_results": {
+    "global_v1": "c4bc41b212015990c71f182006020df099e7622e415bfc1e031167855ad2e5ed",
+    "pair_v1": "c7097556463ab12fa617795375281b29b184327b88f0654378a6c2eefd1f37c6",
+    "pair_v2": "6b1c6b09addec09bb89e4b892d380e5e97a8b9c539324eb53f474c3d40eaf1fa"
+  },
+  "filter": {
+    "direction_bank_seed": 26092001,
+    "direction_bank_size": 128,
+    "direction_index": 110,
+    "direction_float64_sha256": "a641e5803b4c61e6f84794ff8f716ed4f984e7b89fa7778dc00684d6c61c6342",
+    "offset_b": 0.10721304813989381,
+    "alpha": 0.0625,
+    "beta": 0.25,
+    "sigma": 0.25
+  },
+  "exclusion": {
+    "unique_train_images": 11697,
+    "indices_sha256": "f1ac5a9d99701c332859f9d3991120817c904748973e2a2073fc6a91d41ff6c0"
+  },
+  "cohort": {
+    "rule": "SHA-256 rank within class after the frozen exclusion union",
+    "seed": 26092002,
+    "images_per_class": 20,
+    "total_images": 200,
+    "indices_sha256": "a1ec8ca9981ded388c1ee57f0715cb9015375be718b7343f0846f42384ea4a02",
+    "indices": {
+      "0": [19067, 41038, 3204, 29295, 21974, 29940, 34601, 3292, 11451, 41124, 24887, 10365, 48059, 27911, 43292, 12820, 8797, 5082, 13835, 1166],
+      "1": [2029, 26290, 15261, 29270, 24255, 18825, 21215, 43447, 15883, 17750, 10107, 20595, 46592, 24441, 33307, 44992, 46649, 14167, 4797, 39333],
+      "2": [27685, 13477, 36778, 37278, 44535, 30470, 28788, 1606, 26730, 11936, 47392, 48348, 44774, 38971, 22168, 5087, 9940, 21981, 34377, 20145],
+      "3": [37297, 3792, 9479, 46002, 3785, 41117, 5713, 37669, 27620, 6014, 39235, 1041, 30756, 25773, 26554, 6186, 684, 7107, 14373, 45251],
+      "4": [6084, 11994, 17839, 44202, 19340, 19903, 1471, 31609, 33920, 904, 14412, 5214, 37116, 47795, 38228, 27446, 18523, 41699, 45782, 43923],
+      "5": [40600, 5849, 30054, 44301, 36540, 8917, 42538, 49552, 44931, 30506, 23092, 37451, 17855, 11513, 12655, 32656, 25903, 25751, 9235, 42513],
+      "6": [15497, 25645, 20853, 41045, 22534, 44654, 12788, 16639, 15726, 21560, 22389, 48160, 47811, 452, 40628, 8002, 3010, 22068, 25000, 4152],
+      "7": [37908, 27682, 27637, 7385, 36346, 39494, 17714, 31491, 28911, 37286, 30760, 15567, 15222, 48487, 44789, 17942, 13353, 3279, 19394, 36306],
+      "8": [8073, 10279, 41864, 2309, 18546, 38599, 46314, 37633, 45994, 49165, 13460, 20762, 21541, 41943, 27988, 39193, 4580, 15880, 31340, 31157],
+      "9": [28459, 27959, 21372, 13867, 22220, 8896, 15382, 33858, 2506, 49931, 634, 23103, 2047, 22442, 34474, 34633, 43271, 26756, 45547, 4068]
+    }
+  },
+  "sampling": {
+    "filtered_selection_raw_proposals_per_image": 10000,
+    "filtered_estimation_raw_proposals_per_image": 100000,
+    "unfiltered_selection_proposals_per_image": 10000,
+    "unfiltered_estimation_proposals_per_image": 100000,
+    "streams": "four independent deterministic streams per image",
+    "replacement_after_rejection": false,
+    "filter_before_classifier": true,
+    "clipping": false
+  },
+  "confidence": {
+    "collection_familywise_error": 0.001,
+    "one_sided_events_per_image": 32,
+    "one_sided_tail_error": 1.5625e-7
+  },
+  "success_rule": {
+    "all_records_complete": true,
+    "mean_retention_interval": [0.25, 0.60],
+    "maximum_filtered_accuracy_drop_from_unfiltered": 0.01,
+    "target_radius": 0.20,
+    "minimum_covariance_accuracy_advantage_over_joint": 0.05,
+    "minimum_correct_images_with_covariance_lower_minus_joint_upper_at_least_0_01": 10,
+    "maximum_one_sided_exact_mcnemar_p": 0.01,
+    "mcnemar_test_is_separate_from_confidence_family": true
+  },
+  "stopping": "run all 200 records without outcome-based stopping"
+}

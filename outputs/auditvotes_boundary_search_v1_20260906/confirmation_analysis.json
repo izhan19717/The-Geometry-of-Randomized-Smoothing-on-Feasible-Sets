@@ -1,0 +1,171 @@
+{
+  "analysis_script_sha256": "1e76bf2cd88410f91dc07c2f64f3fc2bf12a529eb2a384e7051dc57bf208183c",
+  "confirmation_sha256": "295deed165ac8e81487714897578c823007df3b8ec6198b710bd57bd9b1d683d",
+  "familywise_alpha": 0.001,
+  "freeze_sha256": "fbb3468834ddd7938342c208cb77438d8010d87109bec271f7d077b0899af8ce",
+  "per_inference_alpha": 8.771929824561403e-06,
+  "protocol_sha256": "b08c157557faeb8eb0a3d0f59c3fc2183b5398a513883dffaf2ea3448d4afd1d",
+  "rows": [
+    {
+      "alternative_label": 5,
+      "distance_below_fresh_radius_lower": 0.05209489566340764,
+      "endpoints": {
+        "original": {
+          "maximum_pairwise_pvalue": 0.0,
+          "original_minus_alternative_share": 0.963762673676305,
+          "retained": 53260,
+          "winner_verified_in_joint_family": true
+        },
+        "perturbed": {
+          "maximum_pairwise_pvalue": 0.0,
+          "original_minus_alternative_share": -0.4206429234058,
+          "retained": 24793,
+          "winner_verified_in_joint_family": true
+        }
+      },
+      "fresh_conditional_probability_lower": 0.979274208322083,
+      "fresh_substituted_radius_lower": 0.5097461028957975,
+      "index": 4924,
+      "inside_fresh_substituted_radius_lower": true,
+      "l2_distance": 0.45765120723238983,
+      "original_label": 7,
+      "population_substitution_violation_verified": true,
+      "stored_released_radius": 0.45810929597913236
+    },
+    {
+      "alternative_label": 3,
+      "distance_below_fresh_radius_lower": 0.046974815669578174,
+      "endpoints": {
+        "original": {
+          "maximum_pairwise_pvalue": 0.0,
+          "original_minus_alternative_share": 0.8628139113425194,
+          "retained": 34763,
+          "winner_verified_in_joint_family": true
+        },
+        "perturbed": {
+          "maximum_pairwise_pvalue": 0.0,
+          "original_minus_alternative_share": -0.30987548143439403,
+          "retained": 26743,
+          "winner_verified_in_joint_family": true
+        }
+      },
+      "fresh_conditional_probability_lower": 0.9242335225392359,
+      "fresh_substituted_radius_lower": 0.3585344393570766,
+      "index": 5089,
+      "inside_fresh_substituted_radius_lower": true,
+      "l2_distance": 0.3115596236874984,
+      "original_label": 6,
+      "population_substitution_violation_verified": true,
+      "stored_released_radius": 0.3118715333530374
+    },
+    {
+      "alternative_label": 3,
+      "distance_below_fresh_radius_lower": 0.08251934288138013,
+      "endpoints": {
+        "original": {
+          "maximum_pairwise_pvalue": 0.0,
+          "original_minus_alternative_share": 0.9212667692984385,
+          "retained": 9094,
+          "winner_verified_in_joint_family": true
+        },
+        "perturbed": {
+          "maximum_pairwise_pvalue": 5.181076339358267e-246,
+          "original_minus_alternative_share": -0.3994732221246708,
+          "retained": 6834,
+          "winner_verified_in_joint_family": true
+        }
+      },
+      "fresh_conditional_probability_lower": 0.9511697294329573,
+      "fresh_substituted_radius_lower": 0.41407566618658526,
+      "index": 8654,
+      "inside_fresh_substituted_radius_lower": true,
+      "l2_distance": 0.3315563233052051,
+      "original_label": 2,
+      "population_substitution_violation_verified": true,
+      "stored_released_radius": 0.331888210507784
+    },
+    {
+      "alternative_label": 3,
+      "distance_below_fresh_radius_lower": 0.08422055699539599,
+      "endpoints": {
+        "original": {
+          "maximum_pairwise_pvalue": 0.0,
+          "original_minus_alternative_share": 0.8772867420349435,
+          "retained": 19460,
+          "winner_verified_in_joint_family": true
+        },
+        "perturbed": {
+          "maximum_pairwise_pvalue": 2.0856034413814408e-33,
+          "original_minus_alternative_share": -0.10553310537768107,
+          "retained": 12868,
+          "winner_verified_in_joint_family": true
+        }
+      },
+      "fresh_conditional_probability_lower": 0.9297506158845361,
+      "fresh_substituted_radius_lower": 0.3684840515281089,
+      "index": 6665,
+      "inside_fresh_substituted_radius_lower": true,
+      "l2_distance": 0.28426349453271293,
+      "original_label": 4,
+      "population_substitution_violation_verified": true,
+      "stored_released_radius": 0.2845480382824842
+    },
+    {
+      "alternative_label": 4,
+      "distance_below_fresh_radius_lower": 0.09454332779172231,
+      "endpoints": {
+        "original": {
+          "maximum_pairwise_pvalue": 0.0,
+          "original_minus_alternative_share": 0.9022789519921451,
+          "retained": 38702,
+          "winner_verified_in_joint_family": true
+        },
+        "perturbed": {
+          "maximum_pairwise_pvalue": 8.653255000048979e-05,
+          "original_minus_alternative_share": -0.024405665149215983,
+          "retained": 23724,
+          "winner_verified_in_joint_family": false
+        }
+      },
+      "fresh_conditional_probability_lower": 0.9457866399748385,
+      "fresh_substituted_radius_lower": 0.40132622648800953,
+      "index": 634,
+      "inside_fresh_substituted_radius_lower": true,
+      "l2_distance": 0.3067828986962872,
+      "original_label": 7,
+      "population_substitution_violation_verified": false,
+      "stored_released_radius": 0.30709003260795975
+    },
+    {
+      "alternative_label": 3,
+      "distance_below_fresh_radius_lower": 0.12054723921326183,
+      "endpoints": {
+        "original": {
+          "maximum_pairwise_pvalue": 0.0,
+          "original_minus_alternative_share": 0.8977636883635988,
+          "retained": 29021,
+          "winner_verified_in_joint_family": true
+        },
+        "perturbed": {
+          "maximum_pairwise_pvalue": 0.9999995154932428,
+          "original_minus_alternative_share": 0.03927114853308775,
+          "retained": 15202,
+          "winner_verified_in_joint_family": false
+        }
+      },
+      "fresh_conditional_probability_lower": 0.9344982469507974,
+      "fresh_substituted_radius_lower": 0.37753911454759226,
+      "index": 5211,
+      "inside_fresh_substituted_radius_lower": true,
+      "l2_distance": 0.25699187533433043,
+      "original_label": 7,
+      "population_substitution_violation_verified": false,
+      "stored_released_radius": 0.25724915612182264
+    }
+  ],
+  "search_summary_sha256": "ad96778b0698ab4ceb9491190ec474dac6d2b61412642fa14c9dc83e08aed245",
+  "selected_pair_count": 6,
+  "simultaneous_family_size": 114,
+  "status": "confirmation_analysis_complete",
+  "verified_population_substitution_violation_count": 4
+}

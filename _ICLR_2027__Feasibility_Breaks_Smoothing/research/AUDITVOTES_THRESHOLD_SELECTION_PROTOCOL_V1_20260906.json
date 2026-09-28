@@ -1,0 +1,32 @@
+{
+  "protocol": "auditvotes_sound_threshold_selection_v1",
+  "frozen_at": "2026-09-06",
+  "status": "frozen_before_multithreshold_evaluation",
+  "scope": "Released AuditVotes CIFAR-10 ResNet-110 checkpoint with Gaussian noise scale 0.25",
+  "proposal_batches": {
+    "selection_samples": 100,
+    "estimation_samples": 10000,
+    "error_probability": 0.001,
+    "base_seed": 26090602
+  },
+  "thresholds": [0.0, 0.5, 0.7, 0.8, 0.85, 0.9, 0.925, 0.95, 0.975],
+  "development_indices": {
+    "start": 0,
+    "stop": 1000
+  },
+  "confirmation_indices": {
+    "start": 1000,
+    "stop": 10000
+  },
+  "selection_objective": {
+    "metric": "mean_sound_certified_accuracy",
+    "radii": [0.25, 0.5, 0.75],
+    "tie_break": "smallest_confidence_threshold"
+  },
+  "primary_comparisons": [
+    "development_selected_threshold",
+    "unfiltered_threshold_0",
+    "released_threshold_0.9"
+  ],
+  "statistical_rule": "The label is selected from the independent selection batch. Joint retained-label masses use the fixed proposal count as denominator. The top lower tail receives alpha over 2 and each of nine competitor upper tails receives alpha over 18."
+}

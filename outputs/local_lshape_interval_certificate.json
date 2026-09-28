@@ -1,0 +1,286 @@
+{
+  "witness": {
+    "region": "([0,1]x[0,1/2]) union ([0,1/2]x[1/2,1])",
+    "sigma": "3/20",
+    "a": [
+      "13/20",
+      "49/100"
+    ],
+    "b": [
+      "66/100",
+      "49/100"
+    ]
+  },
+  "method": "Exact Fraction arithmetic; alternating Gaussian-kernel/integral and Machin-arctangent brackets; atanh log bound; decimal-grid outward rounding",
+  "series_preconditions_and_remainders": {
+    "exp_neg": "For y>=0, A_n=y^n/n!. Once n+1>=y the terms decrease; S_(2m+1)<=exp(-y)<=S_(2m), with bracket width A_(2m+1).",
+    "gaussian_integral": "For t>=0, A_n=t^(2n+1)/(2^n n! (2n+1)); A_(n+1)/A_n < (t^2/2)/(n+1). After n+1>=t^2/2, adjacent odd/even partial sums bracket the integral. Negative t uses oddness.",
+    "log": "For x>0, z=(x-1)/(x+1) has |z|<1 and log(x)=2 sum z^(2k+1)/(2k+1). For z>=0 the omitted tail is at most 2*z^(2N+3)/((2N+3)*(1-z^2)); x<1 is handled by log(x)=-log(1/x).",
+    "pi": "Machin identity pi=16 atan(1/5)-4 atan(1/239); each atan series has decreasing alternating terms for 0<=z<=1, so adjacent partial sums bracket it.",
+    "sqrt_and_decimal_rounding": "Inputs are nonnegative rational intervals; integer square-root comparisons and integer floor/ceiling division round both endpoints outwards."
+  },
+  "interval_propagation_preconditions": {
+    "sigma_positive": "sigma=3/20>0",
+    "horizontal_displacement_positive": "b_1-a_1=1/100>0",
+    "normalizers_positive": "Both unnormalized rectangle-union weight intervals have positive lower bounds",
+    "division": "Every divisor interval is checked not to contain zero",
+    "log": "The normalizer-ratio interval has a strictly positive lower endpoint",
+    "exact_tv_event_shape": "The certified crossing interval is contained in (1/2,1)",
+    "fixed_tv_event_shape": "623/1000 is contained in (1/2,1)",
+    "decision_event_shape": "633/1000 is contained in (1/2,1)",
+    "mad_split_shape": "The outward mean interval is contained in (1/2,1)",
+    "cohen_equivalence": "Phi is strictly increasing and ||a-b||/sigma=1/15"
+  },
+  "analytic_moment_and_certificate_identities": {
+    "second_moment": "On standardized [alpha,beta], the unnormalized second moment is c^2 J + 2 c sigma (k(alpha)-k(beta)) + sigma^2 (J + alpha k(alpha) - beta k(beta)).",
+    "mean_absolute_deviation": "For mu=E[X], E|X-mu|=2 E[(mu-X)_+]; the certified mu interval lies in (1/2,1), fixing which L-shape rectangles are split.",
+    "binary_cohen": "For a binary Gaussian smoother, Cohen radius is sigma*Phi^-1(p_A); strict monotonicity makes radius>||a-b|| equivalent to p_A>Phi(||a-b||/sigma)=Phi(1/15)."
+  },
+  "internal_tolerance": "1/10^40",
+  "published_decimal_digits": 24,
+  "intervals": {
+    "weight_a_unnormalized": {
+      "lower": "3.744272734181941481162067",
+      "upper": "3.744272734181941481162068",
+      "lower_rational": "3744272734181941481162067/1000000000000000000000000",
+      "upper_rational": "936068183545485370290517/250000000000000000000000"
+    },
+    "weight_b_unnormalized": {
+      "lower": "3.691685001192144786479268",
+      "upper": "3.691685001192144786479269",
+      "lower_rational": "922921250298036196619817/250000000000000000000000",
+      "upper_rational": "3691685001192144786479269/1000000000000000000000000"
+    },
+    "log_normalizer_ratio": {
+      "lower": "-0.014144407916842096063017",
+      "upper": "-0.014144407916842096063016",
+      "lower_rational": "-14144407916842096063017/1000000000000000000000000",
+      "upper_rational": "-1768050989605262007877/125000000000000000000000"
+    },
+    "mean_a_x": {
+      "lower": "0.617722152098600982121107",
+      "upper": "0.617722152098600982121108",
+      "lower_rational": "617722152098600982121107/1000000000000000000000000",
+      "upper_rational": "154430538024650245530277/250000000000000000000000"
+    },
+    "second_moment_a_x": {
+      "lower": "0.406140277215416801239738",
+      "upper": "0.406140277215416801239739",
+      "lower_rational": "203070138607708400619869/500000000000000000000000",
+      "upper_rational": "406140277215416801239739/1000000000000000000000000"
+    },
+    "variance_a_x": {
+      "lower": "0.024559620022089675499688",
+      "upper": "0.024559620022089675499689",
+      "lower_rational": "3069952502761209437461/125000000000000000000000",
+      "upper_rational": "24559620022089675499689/1000000000000000000000000"
+    },
+    "variance_over_sigma_squared": {
+      "lower": "1.091538667648430022208362",
+      "upper": "1.091538667648430022208363",
+      "lower_rational": "545769333824215011104181/500000000000000000000000",
+      "upper_rational": "1091538667648430022208363/1000000000000000000000000"
+    },
+    "mad_split_location": {
+      "lower": "0.617722152098600982121107",
+      "upper": "0.617722152098600982121108",
+      "lower_rational": "617722152098600982121107/1000000000000000000000000",
+      "upper_rational": "154430538024650245530277/250000000000000000000000"
+    },
+    "conditional_mad_a_x": {
+      "lower": "0.129072436421901388210328",
+      "upper": "0.129072436421901388210329",
+      "lower_rational": "16134054552737673526291/125000000000000000000000",
+      "upper_rational": "129072436421901388210329/1000000000000000000000000"
+    },
+    "gaussian_mad": {
+      "lower": "0.119682684120429803381983",
+      "upper": "0.119682684120429803381984",
+      "lower_rational": "119682684120429803381983/1000000000000000000000000",
+      "upper_rational": "3740083878763431355687/31250000000000000000000"
+    },
+    "conditional_mad_over_gaussian_mad": {
+      "lower": "1.078455395368833949193686",
+      "upper": "1.078455395368833949193687",
+      "lower_rational": "539227697684416974596843/500000000000000000000000",
+      "upper_rational": "1078455395368833949193687/1000000000000000000000000"
+    },
+    "mean_drift_excess": {
+      "lower": "0.014345710178399563501730",
+      "upper": "0.014345710178399563501731",
+      "lower_rational": "1434571017839956350173/100000000000000000000000",
+      "upper_rational": "14345710178399563501731/1000000000000000000000000"
+    },
+    "gaussian_kl": {
+      "lower": "0.002222222222222222222222",
+      "upper": "0.002222222222222222222223",
+      "lower_rational": "1111111111111111111111/500000000000000000000000",
+      "upper_rational": "2222222222222222222223/1000000000000000000000000"
+    },
+    "kl": {
+      "lower": "0.002423524483779689660935",
+      "upper": "0.002423524483779689660936",
+      "lower_rational": "484704896755937932187/200000000000000000000000",
+      "upper_rational": "302940560472461207617/125000000000000000000000"
+    },
+    "kl_excess": {
+      "lower": "0.000201302261557467438713",
+      "upper": "0.000201302261557467438714",
+      "lower_rational": "201302261557467438713/1000000000000000000000000",
+      "upper_rational": "100651130778733719357/500000000000000000000000"
+    },
+    "crossing_x": {
+      "lower": "0.623175082187105283858211",
+      "upper": "0.623175082187105283858212",
+      "lower_rational": "623175082187105283858211/1000000000000000000000000",
+      "upper_rational": "155793770546776320964553/250000000000000000000000"
+    },
+    "cdf_a_at_crossing": {
+      "lower": "0.504659372106844942459609",
+      "upper": "0.504659372106844942459610",
+      "lower_rational": "504659372106844942459609/1000000000000000000000000",
+      "upper_rational": "50465937210684494245961/100000000000000000000000"
+    },
+    "cdf_b_at_crossing": {
+      "lower": "0.476017949234518133982919",
+      "upper": "0.476017949234518133982920",
+      "lower_rational": "476017949234518133982919/1000000000000000000000000",
+      "upper_rational": "11900448730862953349573/25000000000000000000000"
+    },
+    "exact_tv": {
+      "lower": "0.028641422872326808476690",
+      "upper": "0.028641422872326808476691",
+      "lower_rational": "2864142287232680847669/100000000000000000000000",
+      "upper_rational": "28641422872326808476691/1000000000000000000000000"
+    },
+    "fixed_event_cut": {
+      "lower": "0.623000000000000000000000",
+      "upper": "0.623000000000000000000000",
+      "lower_rational": "623/1000",
+      "upper_rational": "623/1000"
+    },
+    "fixed_event_probability_gap": {
+      "lower": "0.028641407136172661708889",
+      "upper": "0.028641407136172661708890",
+      "lower_rational": "28641407136172661708889/1000000000000000000000000",
+      "upper_rational": "2864140713617266170889/100000000000000000000000"
+    },
+    "gaussian_tv": {
+      "lower": "0.026591227634184210139237",
+      "upper": "0.026591227634184210139238",
+      "lower_rational": "26591227634184210139237/1000000000000000000000000",
+      "upper_rational": "13295613817092105069619/500000000000000000000000"
+    },
+    "tv_excess": {
+      "lower": "0.002050195238142598337453",
+      "upper": "0.002050195238142598337454",
+      "lower_rational": "2050195238142598337453/1000000000000000000000000",
+      "upper_rational": "1025097619071299168727/500000000000000000000000"
+    },
+    "fixed_event_excess_over_gaussian_tv": {
+      "lower": "0.002050179501988451569652",
+      "upper": "0.002050179501988451569653",
+      "lower_rational": "512544875497112892413/250000000000000000000000",
+      "upper_rational": "2050179501988451569653/1000000000000000000000000"
+    },
+    "decision_event_cut": {
+      "lower": "0.633000000000000000000000",
+      "upper": "0.633000000000000000000000",
+      "lower_rational": "633/1000",
+      "upper_rational": "633/1000"
+    },
+    "decision_event_probability_a": {
+      "lower": "0.527476587063118481167927",
+      "upper": "0.527476587063118481167928",
+      "lower_rational": "527476587063118481167927/1000000000000000000000000",
+      "upper_rational": "65934573382889810145991/125000000000000000000000"
+    },
+    "decision_event_probability_b": {
+      "lower": "0.498885133554730111709643",
+      "upper": "0.498885133554730111709644",
+      "lower_rational": "498885133554730111709643/1000000000000000000000000",
+      "upper_rational": "124721283388682527927411/250000000000000000000000"
+    },
+    "decision_event_margin_a": {
+      "lower": "0.054953174126236962335854",
+      "upper": "0.054953174126236962335855",
+      "lower_rational": "27476587063118481167927/500000000000000000000000",
+      "upper_rational": "10990634825247392467171/200000000000000000000000"
+    },
+    "decision_event_half_gap_b": {
+      "lower": "0.001114866445269888290356",
+      "upper": "0.001114866445269888290357",
+      "lower_rational": "278716611317472072589/250000000000000000000000",
+      "upper_rational": "1114866445269888290357/1000000000000000000000000"
+    },
+    "twice_gaussian_tv": {
+      "lower": "0.053182455268368420278474",
+      "upper": "0.053182455268368420278475",
+      "lower_rational": "26591227634184210139237/500000000000000000000000",
+      "upper_rational": "2127298210734736811139/40000000000000000000000"
+    },
+    "gaussian_rate_false_certificate_slack": {
+      "lower": "0.001770718857868542057379",
+      "upper": "0.001770718857868542057380",
+      "lower_rational": "1770718857868542057379/1000000000000000000000000",
+      "upper_rational": "88535942893427102869/50000000000000000000000"
+    },
+    "cohen_probability_threshold_phi_1_over_15": {
+      "lower": "0.526576464300365103805813",
+      "upper": "0.526576464300365103805814",
+      "lower_rational": "526576464300365103805813/1000000000000000000000000",
+      "upper_rational": "263288232150182551902907/500000000000000000000000"
+    },
+    "cohen_probability_slack": {
+      "lower": "0.000900122762753377362114",
+      "upper": "0.000900122762753377362115",
+      "lower_rational": "450061381376688681057/500000000000000000000000",
+      "upper_rational": "180024552550675472423/200000000000000000000000"
+    },
+    "pi": {
+      "lower": "3.141592653589793238462643",
+      "upper": "3.141592653589793238462644",
+      "lower_rational": "3141592653589793238462643/1000000000000000000000000",
+      "upper_rational": "785398163397448309615661/250000000000000000000000"
+    },
+    "sqrt_2pi": {
+      "lower": "2.506628274631000502415765",
+      "upper": "2.506628274631000502415766",
+      "lower_rational": "501325654926200100483153/200000000000000000000000",
+      "upper_rational": "1253314137315500251207883/500000000000000000000000"
+    }
+  },
+  "certified": {
+    "crossing_in_half_to_one": true,
+    "exact_tv_value_enclosed": true,
+    "kl_strictly_exceeds_gaussian": true,
+    "tv_strictly_exceeds_gaussian": true,
+    "fixed_rational_event_alone_proves_tv_excess": true,
+    "binary_smoothed_label_flips_between_a_and_b": true,
+    "gaussian_rate_tv_test_would_include_b": true,
+    "local_kl_variance_rate_exceeds_gaussian": true,
+    "local_tv_mad_rate_exceeds_gaussian": true,
+    "ordinary_binary_cohen_certificate_would_include_b": true
+  },
+  "rational_margin_guarantees": {
+    "kl_excess_strictly_greater_than": "1/5000",
+    "exact_tv_excess_strictly_greater_than": "1/500",
+    "fixed_event_excess_strictly_greater_than": "1/500",
+    "decision_probability_a_strictly_greater_than": "527/1000",
+    "decision_probability_b_strictly_less_than": "499/1000",
+    "gaussian_rate_false_certificate_slack_strictly_greater_than": "1/1000",
+    "variance_over_sigma_squared_strictly_greater_than": "109/100",
+    "conditional_mad_over_gaussian_mad_strictly_greater_than": "107/100",
+    "cohen_probability_slack_strictly_greater_than": "9/10000"
+  },
+  "trust_assumptions": [
+    "Correctness of Python arbitrary-precision integers and fractions.Fraction",
+    "Correct implementation of the elementary series remainder arguments documented in rational_interval.py",
+    "The analytic rectangle-union KL/first- and second-moment identities, split-at-mean MAD identity, one-crossing total-variation identity, and binary Cohen formula proved in Appendix F of the manuscript"
+  ],
+  "outside_trusted_computing_base": [
+    "python-flint/Arb 0.9.0 (optional independent cross-check; not imported)",
+    "NumPy, SciPy, mpmath, and platform floating-point transcendental functions",
+    "Monte Carlo and numerical quadrature"
+  ]
+}
